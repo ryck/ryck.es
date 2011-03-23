@@ -16,7 +16,7 @@
 	<meta name="author" content="Ricardo Gonzalez">
 
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
   <link rel="shortcut icon" href="/favicon.ico">
@@ -105,8 +105,13 @@
         </section>
         
         <section id="skills" class="clearfix">
-            <hgroup><h2>Skills</h2></hgroup>
-            <hr>
+            <hgroup>
+              <h2>Skills</h2>
+              <figure>
+                <img src="img/double-gear.png" alt="Personal">
+              </figure>               
+            </hgroup>
+            <hr>           
             <div class="group-list">
               <article id="webdesign">
                   <header><h3>Web Design</h3></header>
@@ -180,7 +185,7 @@
             <hgroup>
               <h2>Experience</h2>
               <figure>
-                <img src="img/double-gear.png" alt="Experience">
+                <img src="img/experience.png" alt="Experience">
               </figure>
             </hgroup>
             <hr>
@@ -210,7 +215,12 @@
         </section>
         
         <section id="education" class="clearfix">
-            <hgroup><h2>Education</h2></hgroup>
+            <hgroup>
+              <h2>Education</h2>
+              <figure>
+                <img src="img/education.png" alt="Experience">
+              </figure>            
+            </hgroup>
             <hr>
             <div class="group-list">
               <article>
@@ -221,7 +231,12 @@
         </section>
         
         <section id="languages" class="clearfix">
-            <hgroup><h2>Languages</h2></hgroup>
+            <hgroup>
+              <h2>Languages</h2>
+              <figure>
+                <img src="img/languages.png" alt="Experience">
+              </figure>            
+            </hgroup>
             <hr>
             <div class="group-list">
               <article>
@@ -234,7 +249,12 @@
         </section>
         
         <section id="hobbies" class="clearfix">
-            <hgroup><h2>Hobbies</h2></hgroup>
+            <hgroup>
+              <h2>Hobbies</h2>
+              <figure>
+                <img src="img/gamepad.png" alt="Experience">
+              </figure>            
+            </hgroup>
             <hr>
             <div class="group-list">
               <article>
@@ -252,7 +272,12 @@
         </section>
         
         <section id="references" class="clearfix">
-            <hgroup><h2>References</h2></hgroup>
+            <hgroup>
+              <h2>References</h2>
+              <figure>
+                <img src="img/love.png" alt="Experience">
+              </figure>            
+            </hgroup>
             <hr>
             <div class="group-list">
               <article>

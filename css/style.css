@@ -319,7 +319,7 @@ ul.social-list li a span, #social legend {
     width: 90%;
     margin: 0 auto;
   }
-  hgroup img.photo {
+  hgroup img.photo, hgroup figure {
     display: none; visibility: hidden;
   }
   section {
@@ -416,15 +416,16 @@ ul.social-list li a span, #social legend {
 
   }
 
-  section#personal figure{
+  section figure{
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-transition: opacity 1s linear;
     -moz-transition: opacity 1s linear;  
-    transition: opacity 1s linear;  
+    transition: opacity 1s linear;
+    margin: 10px;
 	}
  
-  section#personal:hover figure  {
+  section:hover figure  {
     opacity: 100;
     filter: alpha(opacity=1);
     -webkit-transition: opacity 1s linear;
@@ -439,7 +440,7 @@ ul.social-list li a span, #social legend {
   }
 
   section#skills {
-    background: url("../img/double-gear.png") no-repeat scroll left 30px transparent;
+
   }
   section#skills hgroup {
     float: left;
