@@ -411,16 +411,33 @@ ul.social-list li a span, #social legend {
   section {
     margin: 0 0 2em 0;
   }
-  section#personal hgroup {
-    background-image: none;
+
+  section article {
+
   }
-  section#personal {
-    background: url("../img/credit-card.png") no-repeat scroll left 30px transparent;
-  }
-  section#personal hgroup {
+
+  section#personal figure{
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;  
+    transition: opacity 1s linear;  
+	}
+ 
+  section#personal:hover figure  {
+    opacity: 100;
+    filter: alpha(opacity=1);
+    -webkit-transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;  
+    transition: opacity 1s linear;  
+	}
+	
+  section hgroup {
     float: left;
-    width: 100px;
+    width: 125px;
+    min-height: 125px;
   }
+
   section#skills {
     background: url("../img/double-gear.png") no-repeat scroll left 30px transparent;
   }
@@ -433,16 +450,19 @@ ul.social-list li a span, #social legend {
     margin-bottom: 2em;
     width: 40%;
   }
+  section article {
+    margin-bottom: 2em;
+  }  
   #contact-info {
     float: left;
     width: 55%;
   }
-  #skills-list {
-    margin-left: 100px;
+  .group-list {
+    margin: 20px 0 0 150px;
   }
   #wrapper-content {
     margin: 0 auto;
-    width:90%;
+    width:80%;
   }
   #content {   
     font-size: 1.5em;
@@ -458,6 +478,24 @@ ul.social-list li a span, #social legend {
   hr {
     display: none;
     visibility: hidden;
+  }
+  header h3 {
+    font-size: 20px;
+    margin: 0 0 6px;
+    position: relative;
+  }
+  section hgroup h2 {
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+    padding: 0 26px 0 0;
+    position: relative;
+    text-align: right;
+    opacity: 100;
+    filter: alpha(opacity=1);
+  }
+  #languages ul, #hobbies ul, #references ul {
+    margin-left: 0;
   }
 
 }/*/mediaquery*/
