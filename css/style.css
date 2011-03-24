@@ -319,7 +319,7 @@ ul.social-list li a span, #social legend {
     width: 90%;
     margin: 0 auto;
   }
-  hgroup img.photo, hgroup figure {
+  hgroup img.photo, header figure {
     display: none; visibility: hidden;
   }
   section {
@@ -333,7 +333,7 @@ ul.social-list li a span, #social legend {
   article {
     margin: 5px 5px 5px;
   }
-  hgroup {
+  header.main {
     font-size: 20px;
     margin: 5px 10px 5px 3px;
     height: 25px;
@@ -343,7 +343,7 @@ ul.social-list li a span, #social legend {
   header {
     
   }
-  #personal hgroup h2 {
+  #personal header.main h2 {
     display: block;
     visibility: visible;
   }
@@ -351,30 +351,30 @@ ul.social-list li a span, #social legend {
     float: left;
     width: 80%;
   }
-  section hgroup {
+  section header.main {
     background-color: transparent;
     background-position: center right;
     background-repeat: no-repeat;
   }
-  section#personal hgroup {
+  section#personal header.main {
     background-image: url(../img/id-card.png);
   }
-  section#skills hgroup {
+  section#skills header.main {
     background-image: url(../img/gear.png);
   }    
-  section#experience hgroup {
+  section#experience header.main {
     background-image: url(../img/suitcase.png);
   }
-  section#education hgroup {
+  section#education header.main {
     background-image: url(../img/gradhat.png);
   }
-  section#languages hgroup {
+  section#languages header.main {
     background-image: url(../img/chat-2.png);
   }
-  section#hobbies hgroup {
+  section#hobbies header.main {
     background-image: url(../img/controller.png);
   }
-  section#references hgroup {
+  section#references header.main {
     background-image: url(../img/heart.png);
   }
   section hr {
@@ -422,18 +422,20 @@ ul.social-list li a span, #social legend {
     -webkit-transition: opacity 1s linear;
     -moz-transition: opacity 1s linear;  
     transition: opacity 1s linear;
-    margin: 10px;
+    margin: 20px;
+    opacity: 0;
+    text-align: right;
 	}
  
   section:hover figure  {
-    opacity: 100;
-    filter: alpha(opacity=1);
+    opacity: 0.05;
+    filter: alpha(opacity=0.05);
     -webkit-transition: opacity 1s linear;
     -moz-transition: opacity 1s linear;  
     transition: opacity 1s linear;  
 	}
 	
-  section hgroup {
+  section header.main {
     float: left;
     width: 125px;
     min-height: 125px;
@@ -442,14 +444,13 @@ ul.social-list li a span, #social legend {
   section#skills {
 
   }
-  section#skills hgroup {
-    float: left;
-    width: 100px;
+  section#skills header {
+
   }  
   section#skills article {
     float: left;
     margin-bottom: 2em;
-    width: 40%;
+    width: 49%;
   }
   section article {
     margin-bottom: 2em;
@@ -485,15 +486,13 @@ ul.social-list li a span, #social legend {
     margin: 0 0 6px;
     position: relative;
   }
-  section hgroup h2 {
+  section header h2 {
     font-size: 22px;
     font-style: italic;
     font-weight: bold;
     padding: 0 26px 0 0;
     position: relative;
     text-align: right;
-    opacity: 100;
-    filter: alpha(opacity=1);
   }
   #languages ul, #hobbies ul, #references ul {
     margin-left: 0;

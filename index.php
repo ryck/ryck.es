@@ -55,12 +55,12 @@
         </div>        
     <div id="content">
         <section id="personal" class="clearfix">
-            <hgroup>
+            <header class="main">
               <h2>Personal</h2>
               <figure>
                 <img src="img/credit-card.png" alt="Personal">
               </figure>            
-            </hgroup>
+            </header>
             <hr>
             <div class="group-list">
               <article id="contact-info">
@@ -105,12 +105,12 @@
         </section>
         
         <section id="skills" class="clearfix">
-            <hgroup>
+            <header class="main">
               <h2>Skills</h2>
               <figure>
                 <img src="img/double-gear.png" alt="Personal">
               </figure>               
-            </hgroup>
+            </header>
             <hr>           
             <div class="group-list">
               <article id="webdesign">
@@ -182,12 +182,12 @@
         </section>
         
         <section id="experience" class="clearfix">
-            <hgroup>
+            <header class="main">
               <h2>Experience</h2>
               <figure>
                 <img src="img/experience.png" alt="Experience">
               </figure>
-            </hgroup>
+            </header>
             <hr>
             <div class="group-list">
               <article>
@@ -215,12 +215,12 @@
         </section>
         
         <section id="education" class="clearfix">
-            <hgroup>
+            <header class="main">
               <h2>Education</h2>
               <figure>
                 <img src="img/education.png" alt="Experience">
               </figure>            
-            </hgroup>
+            </header>
             <hr>
             <div class="group-list">
               <article>
@@ -231,12 +231,12 @@
         </section>
         
         <section id="languages" class="clearfix">
-            <hgroup>
+            <header class="main">
               <h2>Languages</h2>
               <figure>
                 <img src="img/languages.png" alt="Experience">
               </figure>            
-            </hgroup>
+            </header>
             <hr>
             <div class="group-list">
               <article>
@@ -249,12 +249,12 @@
         </section>
         
         <section id="hobbies" class="clearfix">
-            <hgroup>
+            <header class="main">
               <h2>Hobbies</h2>
               <figure>
                 <img src="img/gamepad.png" alt="Experience">
               </figure>            
-            </hgroup>
+            </header>
             <hr>
             <div class="group-list">
               <article>
@@ -272,12 +272,12 @@
         </section>
         
         <section id="references" class="clearfix">
-            <hgroup>
+            <header class="main">
               <h2>References</h2>
               <figure>
                 <img src="img/love.png" alt="Experience">
               </figure>            
-            </hgroup>
+            </header>
             <hr>
             <div class="group-list">
               <article>
