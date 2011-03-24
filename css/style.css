@@ -409,11 +409,11 @@ ul.social-list li a span, #social legend {
 @media only screen and (min-width: 481px) {
 /* Styles */
   section {
-    margin: 0 0 2em 0;
+
   }
 
   section article {
-
+    margin: 0 0 2em 0;
   }
 
   section figure{
@@ -438,7 +438,6 @@ ul.social-list li a span, #social legend {
   section header.main {
     float: left;
     width: 125px;
-    min-height: 125px;
   }
 
   section#skills {
@@ -452,9 +451,6 @@ ul.social-list li a span, #social legend {
     margin-bottom: 2em;
     width: 49%;
   }
-  section article {
-    margin-bottom: 2em;
-  }  
   #contact-info {
     float: left;
     width: 55%;
