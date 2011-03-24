@@ -428,8 +428,8 @@ ul.social-list li a span, #social legend {
 	}
  
   section:hover figure  {
-    opacity: 0.05;
-    filter: alpha(opacity=0.05);
+    opacity: 0.1;
+    filter: alpha(opacity=0.1);
     -webkit-transition: opacity 1s linear;
     -moz-transition: opacity 1s linear;  
     transition: opacity 1s linear;  
