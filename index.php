@@ -116,9 +116,9 @@
               <article id="webdesign">
                   <header><h3>Web Design</h3></header>
                   <ul>
-                      <li>HTML, XHTML &amp; HTML5</li>
+                      <li>HTML, XHTML & HTML5</li>
                       <li>CSS 2/3</li>
-                      <li>Javascript (jQuery framework) &amp; JSON</li>
+                      <li>Javascript (jQuery framework) & JSON</li>
                       <li>AJAX</li>
                       <li>microformats</li>
                       <li>XML</li>
@@ -173,7 +173,7 @@
               <article id="other">
                   <header><h3>Other</h3></header>
                       <ul>
-                          <li>SEO &amp; SEM</li>
+                          <li>SEO & SEM</li>
                           <li>Cross Browser Compatibility</li>
                           <li>Firefox Extension Development (XUL)</li>
                       </ul>
@@ -202,7 +202,7 @@
                   <ul>
                       <li>Web Developer / Designer</li>
                       <li>System Administrator</li>
-                      <li><abbr title="Search Engine Optimization">SEO Manager</abbr></li>
+                      <li>SEO Manager</li>
                   </ul>
               </article>
               <article>
@@ -241,7 +241,7 @@
             <div class="group-list">
               <article>
                   <ul>
-                      <li>Spanish &amp; Galician (mother tongues)</li>
+                      <li>Spanish & Galician (mother tongues)</li>
                       <li>English (fluent, both spoken and written)</li>
                   </ul>
               </article>
@@ -265,7 +265,7 @@
                       <li>Reading</li>
                       <li>Travelling</li>
                       <li>Video games</li>
-                      <li>Photography (<a href="http://www.flickr.com/photos/ryck/">my flickr</a>)</li>
+                      <li>Photography</li>
                   </ul>
               </article>
           </div>   
