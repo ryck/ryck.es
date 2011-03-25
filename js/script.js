@@ -4,8 +4,8 @@ $(function(){
 
     $('textarea').growingTextarea();
 
-    $('hgroup').click(function () {
-        $(this).siblings('article').slideToggle('fast');
+    $('header.main').click(function () {
+        $(this).siblings('.group-list').slideToggle('fast');
         $(this).siblings('hr').toggle();
     });
 
