@@ -251,11 +251,6 @@ ul.social-list li a span, #social legend {
   display: none;
   visibility: hidden;
 }
-#social {
-  float: right;
-  margin: 0 4px 0 0;
-  width: 42px;
-}
 #experience header span {
   color: #999999;
   font-size: 0.5em;
@@ -351,6 +346,11 @@ ul.social-list li a span, #social legend {
     float: left;
     width: 80%;
   }
+  #social {
+    float: right;
+    margin: 0 4px 0 0;
+    width: 42px;
+  }  
   section header.main {
     background-color: transparent;
     background-position: center right;
@@ -408,6 +408,9 @@ ul.social-list li a span, #social legend {
 
 @media only screen and (min-width: 481px) {
 /* Styles */
+  #social {
+    
+  }
   section {
 
   }
@@ -452,8 +455,8 @@ ul.social-list li a span, #social legend {
     width: 49%;
   }
   #contact-info {
-    float: left;
     width: 55%;
+    margin: 0;
   }
   .group-list {
     margin: 20px 0 0 150px;
