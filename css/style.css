@@ -431,7 +431,8 @@ ul.social-list li a span, #social legend {
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-transition: opacity 1s linear;
-    -moz-transition: opacity 1s linear;  
+    -moz-transition: opacity 1s linear;
+    -o-transition: opacity 1s linear;
     transition: opacity 1s linear;
     margin: 20px;
     opacity: 0;
@@ -442,7 +443,8 @@ ul.social-list li a span, #social legend {
     opacity: 0.1;
     filter: alpha(opacity=0.1);
     -webkit-transition: opacity 1s linear;
-    -moz-transition: opacity 1s linear;  
+    -moz-transition: opacity 1s linear;
+    -o-transition: opacity 1s linear;
     transition: opacity 1s linear;  
 	}
 	
