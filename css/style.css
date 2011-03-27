@@ -430,22 +430,21 @@ ul.social-list li a span, #social legend {
   section figure{
     opacity: 0;
     filter: alpha(opacity=0);
-    -webkit-transition: opacity 1s linear;
-    -moz-transition: opacity 1s linear;
-    -o-transition: opacity 1s linear;
-    transition: opacity 1s linear;
+    -webkit-transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;  
     margin: 20px;
-    opacity: 0;
     text-align: right;
 	}
  
   section:hover figure  {
     opacity: 0.1;
     filter: alpha(opacity=0.1);
-    -webkit-transition: opacity 1s linear;
-    -moz-transition: opacity 1s linear;
-    -o-transition: opacity 1s linear;
-    transition: opacity 1s linear;  
+    -webkit-transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;  
 	}
 	
   section header.main {
