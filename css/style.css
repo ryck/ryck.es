@@ -268,7 +268,7 @@ ul.menu li span {
 
 /* Hide for both screenreaders and browsers:
    css-discuss.incutio.com/wiki/Screenreader_Visibility */
-.hidden { display: none; visibility: hidden; }
+.hidden { display: n padding: 0.5em 0.5em 1em;one; visibility: hidden; }
 
 /* Hide only visually, but have it available for screenreaders: by Jon Neal.
   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
@@ -460,7 +460,7 @@ ul.menu li span {
   }
   #social fieldset {
     border: 1px solid #DDDDDD;
-    padding: 0.5em 1em 1em;
+    padding: 0.5em 0.5em 1em;
     box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);  
   }
   #social legend {
