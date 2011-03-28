@@ -175,6 +175,19 @@ a:hover { color: #036; }
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'AllerLightRegular';
+    src: url('../fonts/aller_lt-webfont.eot');
+    src: url('../fonts/aller_lt-webfont.eot?iefix') format('eot'),
+         url('../fonts/aller_lt-webfont.woff') format('woff'),
+         url('../fonts/aller_lt-webfont.ttf') format('truetype'),
+         url('../fonts/aller_lt-webfont.svg#webfontMwpBN7Lk') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 
 /**
  * Primary styles
@@ -182,7 +195,7 @@ a:hover { color: #036; }
  * Author: Ricardo Gonzalez
  */
 body {
-  font-family: JunctionRegular, Georgia, Arial, Helvetica, sans-serif;
+  font-family: AllerLightRegular, Georgia, Arial, Helvetica, sans-serif;
   background:none repeat scroll 0 0 #F7F7F7;
 }
 ol, ul {
