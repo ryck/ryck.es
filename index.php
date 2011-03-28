@@ -191,7 +191,7 @@
             <hr>
             <div class="group-list">
               <article>
-                  <header><h3><a href="http://www.defaqto.com/">Defaqto</a> <span>Oct. 2010 &mdash; nowadays</span></h3></header>     
+                  <header><h3><a href="http://www.defaqto.com/">Defaqto</a> <span>Oct. 2010 &mdash; currently</span></h3></header>     
                   <ul>
                       <li>Web Developer / Designer</li>
                       <li>Drupal Expert</li>
