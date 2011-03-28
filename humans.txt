@@ -3,10 +3,10 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site: 
-  Twitter: 
-  Location: 
+  Main developer: Ricardo Gonzalez
+  Site: ryck.es
+  Twitter: @ryck
+  Location: London, UK
 
 /* THANKS */
   Names (& URL): 
@@ -14,7 +14,7 @@
 /* SITE */
   Standards: HTML5, CSS3
   Components: Modernizr, jQuery
-  Software:
+  Software: gedit, GIT, PHPDesigner, Textmate
   
 
                                     
