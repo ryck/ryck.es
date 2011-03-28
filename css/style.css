@@ -240,25 +240,6 @@ ul.menu li span {
   font: 11px arial;
   margin: 0;
 }
-#social {
-  padding: 5px 0;
-}
-#social img {
-  vertical-align:text-bottom;
-}
-#social li {
-  list-style: none;
-  float: left;
-  padding-right:5px;
-}
-ul.social-list {
-  padding: 0;
-  margin: 0;
-}
-ul.social-list li a span, #social legend {
-  display: none;
-  visibility: hidden;
-}
 #experience header span {
   color: #999999;
   font-size: 0.5em;
@@ -358,6 +339,23 @@ ul.social-list li a span, #social legend {
     float: right;
     margin: 0 4px 0 0;
     width: 42px;
+    padding: 5px 0;
+  }
+  #social img {
+    vertical-align:text-bottom;
+  }
+  #social li {
+    list-style: none;
+    float: left;
+    padding-right:5px;
+  }
+  ul.social-list {
+    padding: 0;
+    margin: 0;
+  }
+  ul.social-list li a span, #social legend {
+    display: none;
+    visibility: hidden;
   }  
   section header.main {
     background-color: transparent;
@@ -417,10 +415,52 @@ ul.social-list li a span, #social legend {
 @media only screen and (min-width: 481px) {
 /* Styles */
   #social {
-    
+      float: right;
+      
   }
+  #social a {
+    text-decoration: none;
+  } 
+  #social img {
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+  }
+  #social img {
+	  opacity: .3;
+	  filter: alpha(opacity=30);
+   	-webkit-transition: opacity 0.3s linear;
+   	-moz-transition: opacity 0.3s linear;  
+   	-o-transition: opacity 0.3s linear;   	
+	  }
+   
+  #social a:hover img{
+	  opacity: 1;
+	  filter: alpha(opacity=100);
+   	-webkit-transition: opacity 0.3s linear;
+   	-moz-transition: opacity 0.3s linear;  
+   	-o-transition: opacity 0.3s linear;   	
+	  }  
+  #social ul {
+      margin: 0 0 0 1em;
+      width: 12em;
+      font-size: 0.8em;
+  }
+  #social fieldset {
+    border: 1px solid #DDDDDD;
+    padding: 0.5em 1em 1em;
+    box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);  
+  }
+  #social legend {
+      color: #999999;
+      font-size: 0.6em;
+  }
+  #social ul li {
+      float: left;
+      padding: 0;
+      width: 6em;
+  }      
   section {
-
+      margin: 0 0 1em;
   }
 
   section article {
@@ -464,8 +504,9 @@ ul.social-list li a span, #social legend {
     width: 49%;
   }
   #contact-info {
-    width: 55%;
+    width: 45%;
     margin: 0;
+    float: left;
   }
   .group-list {
     margin: 20px 0 0 150px;
@@ -478,7 +519,7 @@ ul.social-list li a span, #social legend {
     font-size: 138.5%;
     line-height: 138.5%;
     margin: 1em 0 1em;
-    padding: 1em 2em;
+    padding: 1em;
     text-shadow: 0 1px 3px #CFCFCF;
     background-color: #FDFCFC;
     border-radius:5px;
