@@ -562,6 +562,9 @@ ul.menu li span {
   #languages ul, #hobbies ul, #references ul {
     margin-left: 0;
   }
+  #contact p {
+    margin: 1em 0 0 0;
+  }
 
 }/*/mediaquery*/
 

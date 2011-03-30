@@ -66,13 +66,13 @@
                       <p id="name-wrap" class="slider">
                           <label for="name">Name</label>
                           <br>
-                          <input type="text" id="name" name="name" required autofocus />
+                          <input type="text" id="name" name="name" autofocus />
                       </p><!--/#name-wrap-->
                       
                       <p id="email-wrap"  class="slider">
                           <label for="email">E&ndash;mail</label>
                           <br>
-                          <input type="email" id="email" name="email" required />
+                          <input type="email" id="email" name="email" />
                       </p><!--/#email-wrap-->
                       
                       <p id="subject-wrap"  class="slider">
@@ -84,8 +84,8 @@
                       <p id="comment-wrap"  class="slider">
                           <label for="comment">Comment</label>
                           <br>
-                          <textarea cols="53" rows="10" id="comment" name="comment" required></textarea>
-                      </div><!--/#comment-wrap-->
+                          <textarea cols="53" rows="10" id="comment" name="comment"></textarea>
+                      </p><!--/#comment-wrap-->
                       
                       <p id="spam-wrap"  class="slider">
                           <label for="spam">2+3?</label>
@@ -97,6 +97,7 @@
                           <!--<input type="submit" id="btn" name="btn" value="submit" />-->
                           <button type="submit" id="subContact" class="small awesome">submit</button> 
                       </p>
+                    </div>
                   </form>
 
                   <?php
