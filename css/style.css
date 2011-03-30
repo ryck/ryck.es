@@ -516,6 +516,9 @@ ul.menu li span {
     margin-bottom: 2em;
     width: 49%;
   }
+  article#tools {
+    clear: left;
+  }  
   #contact-info {
     width: 45%;
     margin: 0;
