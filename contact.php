@@ -7,11 +7,7 @@
 <head>
   <meta charset="utf-8">
 
-  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-       Remove this if you use the .htaccess -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <title></title>
+  <title>ryck.me - contact</title>
 	<meta name="description" content="ryck.me">
 	<meta name="author" content="Ricardo Gonzalez">
 
@@ -34,6 +30,7 @@
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <script src="js/libs/modernizr-1.7.min.js"></script>
 
+    
 </head>
 
 <body>
@@ -90,7 +87,7 @@
                       <p id="spam-wrap"  class="slider">
                           <label for="spam">2+3?</label>
                           <br>
-                          <input type="number" id="spam" name="spam" required />
+                          <input type="number" id="spam" name="spam"/>
                       </p><!--/#spam-wrap-->   
                                             
                       <p id="button-wrap">
@@ -133,11 +130,27 @@
   <script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
 
 
+
   <!-- scripts concatenated and minified via ant build script-->
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
   <!-- end scripts-->
 
+  <script type="text/javascript">
+      /* <![CDATA[ */
+      jQuery(function(){
+          jQuery("#email").validate({
+              expression: "if (VAL.match(/^[^\\W][a-zA-Z0-9\\_\\-\\.]+([a-zA-Z0-9\\_\\-\\.]+)*\\@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)*\\.[a-zA-Z]{2,4}$/)) return true; else return false;",
+              message: "Invalid E-mail"
+          });
+          jQuery("#spam").validate({
+              expression: "if (VAL == 5) return true; else return false;",
+              message: "Invalid answer. Hint: is a number between 4 and 6"
+          });    
+      });
+      /* ]]> */
+  </script>
+  
 
   <!--[if lt IE 7 ]>
     <script src="js/libs/dd_belatedpng.js"></script>
