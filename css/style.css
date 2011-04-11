@@ -316,10 +316,10 @@ ul.menu li span {
     width: 90%;
     margin: 0 auto;
   }
-  hgroup img.photo, header figure {
+  #resume hgroup img.photo, header figure {
     display: none; visibility: hidden;
   }
-  section {
+  #resume section {
     border-radius:5px;
     border: 1px solid #DDDDDD;
     padding: 3px;
@@ -327,76 +327,76 @@ ul.menu li span {
     background-color: #FDFCFC;
     box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);
   }
-  article {
+  #resume article {
     margin: 5px 5px 5px;
   }
-  header.main {
+  #resume header.main {
     font-size: 20px;
     margin: 5px 10px 5px 3px;
     height: 25px;
     line-height:25px;
     cursor: pointer;
   }
-  header {
+  #resume header {
     
   }
-  #personal header.main h2 {
+  #resume #personal header.main h2 {
     display: block;
     visibility: visible;
   }
-  #contact-info {
+  #resume #contact-info {
     float: left;
     width: 80%;
   }
-  #social {
+  #resume #social {
     float: right;
     margin: 0 4px 0 0;
     width: 42px;
     padding: 5px 0;
   }
-  #social img {
+  #resume #social img {
     vertical-align:text-bottom;
   }
-  #social li {
+  #resume #social li {
     list-style: none;
     float: left;
     padding-right:5px;
   }
-  ul.social-list {
+  #resume ul.social-list {
     padding: 0;
     margin: 0;
   }
-  ul.social-list li a span, #social legend {
+  #resume ul.social-list li a span, #social legend {
     display: none;
     visibility: hidden;
   }  
-  section header.main {
+  #resume section header.main {
     background-color: transparent;
     background-position: center right;
     background-repeat: no-repeat;
   }
-  section#personal header.main {
+  #resume section#personal header.main {
     background-image: url(../img/id-card.png);
   }
-  section#skills header.main {
+  #resume section#skills header.main {
     background-image: url(../img/gear.png);
   }    
-  section#experience header.main {
+  #resume section#experience header.main {
     background-image: url(../img/suitcase.png);
   }
-  section#education header.main {
+  #resume section#education header.main {
     background-image: url(../img/gradhat.png);
   }
-  section#languages header.main {
+  #resume section#languages header.main {
     background-image: url(../img/chat-2.png);
   }
-  section#hobbies header.main {
+  #resume section#hobbies header.main {
     background-image: url(../img/controller.png);
   }
-  section#references header.main {
+  #resume section#references header.main {
     background-image: url(../img/heart.png);
   }
-  section hr {
+  #resume section hr {
   background: url("../img/hr2.png") repeat-x scroll center center transparent;
   border: medium none;
   display: block;
@@ -427,18 +427,18 @@ ul.menu li span {
 
 @media only screen and (min-width: 481px) {
 /* Styles */
-  #social {
+  #resume #social {
       float: right;
       
   }
-  #social a {
+  #resume #social a {
     text-decoration: none;
   } 
-  #social img {
+  #resume #social img {
     margin: 0 5px 0 0;
     vertical-align: middle;
   }
-  #social img {
+  #resume #social img {
 	  opacity: .3;
 	  filter: alpha(opacity=30);
    	-webkit-transition: opacity 0.3s linear;
@@ -446,41 +446,41 @@ ul.menu li span {
    	-o-transition: opacity 0.3s linear;   	
 	  }
    
-  #social a:hover img{
+  #resume #social a:hover img{
 	  opacity: 1;
 	  filter: alpha(opacity=100);
    	-webkit-transition: opacity 0.3s linear;
    	-moz-transition: opacity 0.3s linear;  
    	-o-transition: opacity 0.3s linear;   	
 	  }  
-  #social ul {
+  #resume #social ul {
       margin: 0 0 0 1em;
       width: 12em;
       font-size: 0.8em;
   }
-  #social fieldset {
+  #resume #social fieldset {
     border: 1px solid #DDDDDD;
     padding: 0.5em 0.5em 1em;
     box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);  
   }
-  #social legend {
+  #resume #social legend {
       color: #999999;
       font-size: 0.6em;
   }
-  #social ul li {
+  #resume #social ul li {
       float: left;
       padding: 0;
       width: 6em;
   }      
-  section {
+  #resume section {
       margin: 0 0 1em;
   }
 
-  section article {
+  #resume section article {
     margin: 0 0 2em 0;
   }
 
-  section figure{
+  #resume section figure{
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-transition: opacity 0.3s linear;
@@ -491,7 +491,7 @@ ul.menu li span {
     text-align: right;
 	}
  
-  section:hover figure  {
+  #resume section:hover figure  {
     opacity: 0.1;
     filter: alpha(opacity=0.1);
     -webkit-transition: opacity 0.3s linear;
@@ -500,23 +500,23 @@ ul.menu li span {
     transition: opacity 0.3s linear;  
 	}
 	
-  section header.main {
+  #resume section header.main {
     float: left;
     width: 125px;
   }
 
-  section#skills {
+  #resume section#skills {
 
   }
-  section#skills header {
+  #resume section#skills header {
 
   }  
-  section#skills article {
+  #resume section#skills article {
     float: left;
     margin-bottom: 2em;
     width: 49%;
   }
-  article#tools {
+  #resume article#tools {
     clear: left;
   }  
   #contact-info {
@@ -542,16 +542,16 @@ ul.menu li span {
     border: 1px solid #DDDDDD;
     box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);    
   } 
-  hr {
+  #resume hr {
     display: none;
     visibility: hidden;
   }
-  header h3 {
+  #resume header h3 {
     font-size: 20px;
     margin: 0 0 6px;
     position: relative;
   }
-  section header h2 {
+  #resume section header h2 {
     font-size: 22px;
     font-style: italic;
     font-weight: bold;
@@ -565,7 +565,57 @@ ul.menu li span {
   #contact p {
     margin: 1em 0 0 0;
   }
+  
+  #portfolio section {
+    
+  }
+  
+  #portfolio article {
+    float: left;
+    margin: 15px 10px;
+    width: 280px;
+  }
+  
+  #portfolio article figure {
+    
+  }
+  
+  #portfolio article figure img {
+    float: left;
+    border: 1px solid #DDDDDD;
+    box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);    
+    padding: 3px;
+  }  
+  #portfolio article figure figcaption {
+    float: left;
+  }  
+  
+  #portfolio section hr {
+  background: url("../img/hr2.png") repeat-x scroll center center transparent;
+  border: medium none;
+  display: block;
+  visibility: visible;
+  margin: 0;
+  }
 
+  #portfolio section article figure img {
+    opacity: 0.6;
+    filter: alpha(opacity=0.6);
+    -webkit-transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear; 
+	}
+ 
+  #portfolio section article:hover figure img {
+    opacity: 1;
+    filter: alpha(opacity=1);
+    -webkit-transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;  
+	}
+          
 }/*/mediaquery*/
 
 

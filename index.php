@@ -32,7 +32,7 @@
 
 </head>
 
-<body>
+<body id="resume">
 
 <div id="wrapper">
     <div id="wrapper-content">

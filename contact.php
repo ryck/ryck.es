@@ -6,12 +6,8 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-
-  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-       Remove this if you use the .htaccess -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <title></title>
+  
+  <title>Contact</title>
 	<meta name="description" content="ryck.me">
 	<meta name="author" content="Ricardo Gonzalez">
 
@@ -90,7 +86,7 @@
                       <p id="spam-wrap"  class="slider">
                           <label for="spam">2+3?</label>
                           <br>
-                          <input type="number" id="spam" name="spam" required />
+                          <input type="number" id="spam" name="spam" />
                       </p><!--/#spam-wrap-->   
                                             
                       <p id="button-wrap">
