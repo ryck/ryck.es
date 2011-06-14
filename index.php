@@ -39,14 +39,10 @@
        
         
         <div id="header" class="clearfix">
-            <nav>
-                <ul class="menu">
-                    <li><a href="/">Home</a></li>
-                    <!--<li><a href="about">About</a><span>me &amp; myself </span></li>-->
-                    <li class="active"><a href="resume">Résumé</a><span>experience</span></li>
-                    <!--<li><a href="portfolio">Portfolio</a><span>last projects</span></li>-->
-                    <li><a href="contact">Contact</a><span>reach me</span></li>
-                </ul>
+            <nav class="button-group">
+              <a href="/" class="button big primary">home</a>
+              <a href="resume" class="button big">résumé</a>
+              <a href="contact" class="button big">contact</a>
             </nav>
         </div>        
     <div id="content">
@@ -85,8 +81,7 @@
               </article>
           
               <aside id="social">
-                  <fieldset>
-                      <legend>Social</legend>
+
                       <ul class="social-list">
                           <li><a href="http://rick.jinlabs.com"><img src="favicon.png" alt="blog" /><span>blog</span></a></li>
                           <li><a href="http://twitter.com/ryck"><img src="img/social/twitter_16.png" alt="twitter" /><span>twitter</span></a></li>
@@ -95,7 +90,7 @@
                           <li><a href="http://www.last.fm/user/Ryck"><img src="img/social/lastfm_16.png" alt="last.fm" /><span>last.fm</span></a></li>
                           <li><a href="http://www.delicious.com/ryck"><img src="img/social/delicious_16.png" alt="del.icio.us" /><span>delicious</span></a></li>
                       </ul>
-                  </fieldset>
+
               </aside>
           </div>
         </section>
