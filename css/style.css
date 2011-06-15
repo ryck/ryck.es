@@ -195,7 +195,7 @@ a:hover { color: #036; }
 		text-decoration: none;
 		width: auto; 
 		height: 29px; 
-		padding: 0px 20px; 
+		padding: 0px 60px; 
 		line-height: 30px; 
 		border: solid 1px #ddd;
 		border-width: 1px 0 1px 1px; 
@@ -436,6 +436,9 @@ ul.menu li span {
     margin-top: 1em;
   }
   
+	ul.tabs li a { 
+		padding: 0px 15px; 
+		}  
   #resume #personal header.main h2 {
     display: block;
     visibility: visible;
