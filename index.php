@@ -45,11 +45,14 @@
               </figure>
             </aside>
         
-            <nav id="main-menu" class="button-group">
-              <a href="/" class="button big primary">home</a>
-              <a href="resume" class="button big">résumé</a>
-              <a href="contact" class="button big">contact</a>
+            <nav id="main-menu">    
+              <ul class="tabs">
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
             </nav>
+            
         </div>        
     <div id="content">
         <section id="personal" class="clearfix">
