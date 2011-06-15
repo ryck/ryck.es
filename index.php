@@ -39,7 +39,13 @@
        
         
         <div id="header" class="clearfix">
-            <nav class="button-group">
+            <aside id="header-logo">
+              <figure>
+                <a href="/" title="ryck"><img src="img/logodr-64.png" alt="ryck" width="64" height="64"></a>
+              </figure>
+            </aside>
+        
+            <nav id="main-menu" class="button-group">
               <a href="/" class="button big primary">home</a>
               <a href="resume" class="button big">résumé</a>
               <a href="contact" class="button big">contact</a>

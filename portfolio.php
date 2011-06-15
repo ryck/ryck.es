@@ -51,47 +51,67 @@
         </div>        
     <div id="content" class="clearfix">
     
-      <section id="portfolio-personal">
-        <hgroup>
-          <h2>Personal</h2>
-        </hgroup>
-        <hr />
+      <section id="showcase" class="clearfix">
         <article>
           <figure>
-            <a href="#" title="Screenshot"><img src="http://placekitten.com/250/200" alt="Screenshot" width="250" height="200"></a>
+            <a href="#" title="Screenshot"><img src="http://placekitten.com/250/200" alt="Screenshot" width="275" height="220"></a>
             <figcaption>
               <h3><a href="#">Description</a></h3>
-              HTML, CSS, PHP, microformats, jQuery, etc
             </figcaption>
+            <ul class="skill-set">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Drupal</li>
+              <li>WordPress</li>
+              <li>Resposive</li>
+            </ul>
           </figure>
         </article>
 
         <article>
           <figure>
-            <a href="#" title="Screenshot"><img src="http://lorempixum.com/250/200" alt="Screenshot" width="250" height="200"></a>
+            <a href="#" title="Screenshot"><img src="http://placekitten.com/250/200" alt="Screenshot" width="275" height="220"></a>
             <figcaption>
               <h3><a href="#">Description</a></h3>
-              HTML, CSS, PHP, microformats, jQuery, etc
+                <ul class="skill-set">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>Drupal</li>
+                  <li>WordPress</li>
+                  <li>Resposive</li>
+                </ul>
             </figcaption>
           </figure>
         </article>
         
         <article>
           <figure>
-            <a href="#" title="Screenshot"><img src="http://placekitten.com/250/200" alt="Screenshot" width="250" height="200"></a>
+            <a href="#" title="Screenshot"><img src="http://placekitten.com/250/200" alt="Screenshot" width="275" height="220"></a>
             <figcaption>
               <h3><a href="#">Description</a></h3>
-              HTML, CSS, PHP, microformats, jQuery, etc
+                <ul class="skill-set">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>Drupal</li>
+                  <li>WordPress</li>
+                  <li>Resposive</li>
+                </ul>
             </figcaption>
           </figure>
         </article>
         
         <article>
           <figure>
-            <a href="#" title="Screenshot"><img src="http://lorempixum.com/250/200" alt="Screenshot" width="250" height="200"></a>
+            <a href="#" title="Screenshot"><img src="http://placekitten.com/250/200" alt="Screenshot" width="275" height="220"></a>
             <figcaption>
               <h3><a href="#">Description</a></h3>
-              HTML, CSS, PHP, microformats, jQuery, etc
+                <ul class="skill-set">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>Drupal</li>
+                  <li>WordPress</li>
+                  <li>Resposive</li>
+                </ul>
             </figcaption>
           </figure>
         </article>

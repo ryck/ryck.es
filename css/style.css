@@ -605,8 +605,7 @@ a.cv {
   padding:0 0 0 20px;
 }
 #header {
-  padding-top: 1em;
-  text-align: right;
+
 }
 ul.menu {
   float: right;
@@ -689,7 +688,7 @@ ul.menu li span {
 @media screen and (max-width: 480px) {
 
   body {
-    font-size: 123.1%;
+    font-size: 100%;
   }
   #wrapper-content {
     width: 90%;
@@ -698,7 +697,7 @@ ul.menu li span {
   #resume hgroup img.photo, header figure {
     display: none; visibility: hidden;
   }
-  #resume section {
+  section {
     -webkit-border-radius: 0.2em; 
     -moz-border-radius: 0.2em; 
     border-radius: 0.2em; 
@@ -719,9 +718,19 @@ ul.menu li span {
     line-height:25px;
     cursor: pointer;
   }
-  #resume header {
-    
+  #header {
+    margin-top: 0.5em; 
   }
+  #header-logo {
+    height: 64px;
+    width: 64px;
+    float: left;
+  }
+  #main-menu {
+    float: right;
+    margin-top: 1em;
+  }
+  
   #resume #personal header.main h2 {
     display: block;
     visibility: visible;
@@ -785,6 +794,67 @@ ul.menu li span {
   visibility: visible;
   margin: 0;
   }
+  
+  #portfolio section {
+    
+  }
+  
+  #portfolio article {
+    margin: 15px auto;
+    width: 285px;
+  }
+  
+  #portfolio article figure {
+    margin: 0 auto;
+  }
+  
+  #portfolio article figure img {
+    border: 1px solid #DDDDDD;
+    box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);    
+    padding: 3px;
+  }  
+  #portfolio article figure figcaption {
+
+  }  
+  
+  #portfolio section hr {
+  background: url("../img/hr2.png") repeat-x scroll center center transparent;
+  border: medium none;
+  display: block;
+  visibility: visible;
+  margin: 0;
+  }
+
+  #portfolio section article figure img {
+
+	}
+ 
+  #portfolio section article:hover figure img {
+
+	}
+	
+	.skill-set {
+	  list-style: none outside none;
+	  margin: 0;
+
+	}
+	.skill-set li {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border-radius: 3px 3px 3px 3px;
+    color: #333;
+    display: inline;
+    font-size: 0.75em;
+    line-height: 1.57em;
+    margin: 0;
+    padding: 2px 4px;	
+    text-shadow: 0 1px 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+        
+	}
+	.skill-set li:hover {
+     	
+	}  
+  
   /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
 }/*mediaquery*/
@@ -810,6 +880,35 @@ ul.menu li span {
 @media only screen and (min-width: 481px) {
 /* Styles */
 
+  #header {
+    margin-top: 0.5em;
+  }
+  #header-logo img{
+    height: 64px;
+    width: 64px;
+    float: left;
+    /*
+    -moz-transition: all 2s ease 0s;
+    -webkit-transition: all 2s ease 0s;
+    -o-transition: all 2s ease 0s;
+    transition: all 2s ease 0s;
+    */
+  }
+  
+  #header-logo img:hover {
+  /*
+  -webkit-transform: rotate(720deg);
+  -moz-transform: rotate(720deg);
+  -ms-transform: rotate(720deg);
+  -o-transform: rotate(720deg);
+  transform: rotate(720deg);
+  */
+  
+  }
+  #main-menu {
+    float: right;
+    margin-top:2em;
+  }
   #resume #social a {
     text-decoration: none;
   } 
@@ -954,7 +1053,7 @@ ul.menu li span {
   #portfolio article {
     float: left;
     margin: 15px 10px;
-    width: 280px;
+    width: 285px;
   }
   
   #portfolio article figure {
@@ -968,7 +1067,7 @@ ul.menu li span {
     padding: 3px;
   }  
   #portfolio article figure figcaption {
-    float: left;
+
   }  
   
   #portfolio section hr {
@@ -995,6 +1094,35 @@ ul.menu li span {
     -moz-transition: opacity 0.3s linear;
     -o-transition: opacity 0.3s linear;
     transition: opacity 0.3s linear;  
+	}
+	
+	.skill-set {
+	  list-style: none outside none;
+	  margin: 0;
+
+	}
+	.skill-set li {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border-radius: 3px 3px 3px 3px;
+    color: #333;
+    display: inline;
+    font-size: 0.75em;
+    line-height: 1.57em;
+    margin: 0;
+    padding: 2px 4px;	
+    text-shadow: 0 1px 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+    -webkit-transition: background-color 0.3s linear;
+    -moz-transition: background-color 0.3s linear;
+    -o-transition: background-color 0.3s linear;
+    transition: background-color 0.3s linear;         
+	}
+	.skill-set li:hover {
+  	background: none repeat scroll 0 0 #EEE;
+    -webkit-transition: background-color 0.3s linear;
+    -moz-transition: background-color 0.3s linear;
+    -o-transition: background-color 0.3s linear;
+    transition: background-color 0.3s linear;      	
 	}
           
 }/*/mediaquery*/
