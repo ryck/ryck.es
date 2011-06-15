@@ -637,6 +637,25 @@ ul.menu li span {
   font-style: italic;
   font-weight: normal;
 } 
+
+	.skill-set {
+	  list-style: none outside none;
+	  margin: 0;
+
+	}
+	.skill-set li {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border-radius: 3px 3px 3px 3px;
+    color: #333;
+    display: inline;
+    font-size: 0.75em;
+    line-height: 1.57em;
+    margin: 0;
+    padding: 1px 4px;	
+    text-shadow: 0 1px 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+        
+	}
 /**
  * Non-semantic helper classes: please define your styles before this section.
  */
@@ -691,7 +710,7 @@ ul.menu li span {
     font-size: 100%;
   }
   #wrapper-content {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
   }
   #resume hgroup img.photo, header figure {
@@ -801,7 +820,7 @@ ul.menu li span {
   
   #portfolio article {
     margin: 15px auto;
-    width: 285px;
+    width: 283px;
   }
   
   #portfolio article figure {
@@ -833,24 +852,7 @@ ul.menu li span {
 
 	}
 	
-	.skill-set {
-	  list-style: none outside none;
-	  margin: 0;
 
-	}
-	.skill-set li {
-    background: none repeat scroll 0 0 #F7F7F7;
-    border-radius: 3px 3px 3px 3px;
-    color: #333;
-    display: inline;
-    font-size: 0.75em;
-    line-height: 1.57em;
-    margin: 0;
-    padding: 2px 4px;	
-    text-shadow: 0 1px 0 #FFFFFF;
-    border: 1px solid #DDDDDD;
-        
-	}
 	.skill-set li:hover {
      	
 	}  
@@ -1087,7 +1089,7 @@ ul.menu li span {
     transition: opacity 0.3s linear; 
 	}
  
-  #portfolio section article:hover figure img {
+  #portfolio section article figure img:hover {
     opacity: 1;
     filter: alpha(opacity=1);
     -webkit-transition: opacity 0.3s linear;
@@ -1096,27 +1098,6 @@ ul.menu li span {
     transition: opacity 0.3s linear;  
 	}
 	
-	.skill-set {
-	  list-style: none outside none;
-	  margin: 0;
-
-	}
-	.skill-set li {
-    background: none repeat scroll 0 0 #F7F7F7;
-    border-radius: 3px 3px 3px 3px;
-    color: #333;
-    display: inline;
-    font-size: 0.75em;
-    line-height: 1.57em;
-    margin: 0;
-    padding: 2px 4px;	
-    text-shadow: 0 1px 0 #FFFFFF;
-    border: 1px solid #DDDDDD;
-    -webkit-transition: background-color 0.3s linear;
-    -moz-transition: background-color 0.3s linear;
-    -o-transition: background-color 0.3s linear;
-    transition: background-color 0.3s linear;         
-	}
 	.skill-set li:hover {
   	background: none repeat scroll 0 0 #EEE;
     -webkit-transition: background-color 0.3s linear;

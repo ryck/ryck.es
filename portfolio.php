@@ -64,6 +64,8 @@
               <li>Drupal</li>
               <li>WordPress</li>
               <li>Resposive</li>
+              <li>WordPress</li>
+              <li>Resposive</li>              
             </ul>
           </figure>
         </article>
@@ -73,14 +75,12 @@
             <a href="#" title="Screenshot"><img src="http://placekitten.com/250/200" alt="Screenshot" width="275" height="220"></a>
             <figcaption>
               <h3><a href="#">Description</a></h3>
-                <ul class="skill-set">
-                  <li>HTML5</li>
-                  <li>CSS3</li>
-                  <li>Drupal</li>
-                  <li>WordPress</li>
-                  <li>Resposive</li>
-                </ul>
             </figcaption>
+            <ul class="skill-set">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Resposive</li>
+            </ul>
           </figure>
         </article>
         
@@ -89,14 +89,14 @@
             <a href="#" title="Screenshot"><img src="http://placekitten.com/250/200" alt="Screenshot" width="275" height="220"></a>
             <figcaption>
               <h3><a href="#">Description</a></h3>
-                <ul class="skill-set">
-                  <li>HTML5</li>
-                  <li>CSS3</li>
-                  <li>Drupal</li>
-                  <li>WordPress</li>
-                  <li>Resposive</li>
-                </ul>
             </figcaption>
+            <ul class="skill-set">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Drupal</li>
+              <li>WordPress</li>
+              <li>Resposive</li>
+            </ul>
           </figure>
         </article>
         
@@ -105,14 +105,17 @@
             <a href="#" title="Screenshot"><img src="http://placekitten.com/250/200" alt="Screenshot" width="275" height="220"></a>
             <figcaption>
               <h3><a href="#">Description</a></h3>
-                <ul class="skill-set">
-                  <li>HTML5</li>
-                  <li>CSS3</li>
-                  <li>Drupal</li>
-                  <li>WordPress</li>
-                  <li>Resposive</li>
-                </ul>
             </figcaption>
+            <ul class="skill-set">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Drupal</li>
+              <li>WordPress</li>
+              <li>Resposive</li>
+              <li>Drupal</li>
+              <li>WordPress</li>
+              <li>Resposive</li>                  
+            </ul>
           </figure>
         </article>
                         
