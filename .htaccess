@@ -281,6 +281,10 @@ FileETag None
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+    
+  RewriteRule ^home$ index.php [L]
+  RewriteRule ^portfolio$ portfolio.php [L]
+  RewriteRule ^contact$ contact.php [L]  
 </IfModule>
 
 
@@ -469,3 +473,4 @@ AddCharset utf-8 .html .css .js .xml .json .rss
 # information about setting PHP directives.
 
 # php_flag register_globals Off
+

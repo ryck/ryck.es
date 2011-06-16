@@ -47,7 +47,7 @@
         
             <nav id="main-menu">    
               <ul class="tabs">
-                <li><a class="active" href="index">Home</a></li>
+                <li><a class="active" href="home">Home</a></li>
                 <li><a href="portfolio">Portfolio</a></li>
                 <li><a href="contact">Contact</a></li>
               </ul>
