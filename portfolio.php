@@ -39,15 +39,19 @@
        
         
         <div id="header" class="clearfix">
-            <nav>
-                <ul class="menu">
-                    <li><a href="/">Home</a></li>
-                    <!--<li><a href="about">About</a><span>me &amp; myself </span></li>-->
-                    <li class="active"><a href="resume">Résumé</a><span>experience</span></li>
-                    <!--<li><a href="portfolio">Portfolio</a><span>last projects</span></li>-->
-                    <li><a href="contact">Contact</a><span>reach me</span></li>
-                </ul>
-            </nav>
+            <aside id="header-logo">
+              <figure>
+                <a href="/" title="ryck"><img src="img/logodr-128r.png" alt="ryck" width="64" height="64"></a>
+              </figure>
+            </aside>
+        
+            <nav id="main-menu">    
+              <ul class="tabs">
+                <li><a href="index">Home</a></li>
+                <li><a class="active" href="portfolio">Portfolio</a></li>
+                <li><a href="contact">Contact</a></li>
+              </ul>
+            </nav>    
         </div>        
     <div id="content" class="clearfix">
     
