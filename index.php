@@ -41,18 +41,17 @@
         <div id="header" class="clearfix">
             <aside id="header-logo">
               <figure>
-                <a href="/" title="ryck"><img src="img/logodr-64.png" alt="ryck" width="64" height="64"></a>
+                <a href="/" title="ryck"><img src="img/logodr-128r.png" alt="ryck" width="64" height="64"></a>
               </figure>
             </aside>
         
             <nav id="main-menu">    
               <ul class="tabs">
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="index">Home</a></li>
+                <li><a href="portfolio">Portfolio</a></li>
+                <li><a href="contact">Contact</a></li>
               </ul>
-            </nav>
-            
+            </nav>       
         </div>        
     <div id="content">
         <section id="personal" class="clearfix">
