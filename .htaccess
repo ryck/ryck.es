@@ -469,3 +469,4 @@ AddCharset utf-8 .html .css .js .xml .json .rss
 # information about setting PHP directives.
 
 # php_flag register_globals Off
+
