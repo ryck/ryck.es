@@ -344,10 +344,10 @@ ul.menu li span {
 	}
 
   #header-logo img{
-    -moz-transition: all 2s ease 0s;
-    -webkit-transition: all 2s ease 0s;
-    -o-transition: all 2s ease 0s;
-    transition: all 2s ease 0s;
+    -moz-transition: all 2s linear 0s;
+    -webkit-transition: all 2s linear 0s;
+    -o-transition: all 2s linear 0s;
+    transition: all 2s linear 0s;
 
   }
   
@@ -411,11 +411,11 @@ ul.menu li span {
   
   #header-logo img {
 
-  -webkit-transform: rotate(720deg);
-  -moz-transform: rotate(720deg);
-  -ms-transform: rotate(720deg);
-  -o-transform: rotate(720deg);
-  transform: rotate(720deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
 
   
   }
@@ -424,7 +424,7 @@ ul.menu li span {
 
 /* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
    consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 675px) {
 
   body {
     font-size: 100%;
@@ -585,7 +585,7 @@ ul.menu li span {
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
 }/*mediaquery*/
 
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 676px) {
 /* Styles */
 
   #header {
