@@ -81,7 +81,7 @@ html { overflow-y: scroll; }
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active { outline: none; }
 
-ul, ol { margin-left: 2em; }
+ul, ol { margin-left: 1em; }
 ol { list-style-type: decimal; }
 
 /* Remove margins for navigation lists */
@@ -330,24 +330,24 @@ ul.menu li span {
 
 	}
 	.skill-set li {
-    background: none repeat scroll 0 0 #F7F7F7;
-    border-radius: 3px 3px 3px 3px;
-    color: #333;
-    display: inline;
-    font-size: 0.75em;
-    line-height: 1.57em;
-    margin: 0;
-    padding: 1px 4px;	
-    text-shadow: 0 1px 0 #FFFFFF;
+   background: none repeat scroll 0 0 #EEE;
     border: 1px solid #DDDDDD;
+    border-radius: 3px 3px 3px 3px;
+    color: #333333;
+    float: left;
+    font-size: 0.75em;
+    line-height: 0.75em;
+    margin: 2px;
+    padding: 4px;
+    text-shadow: 0 1px 0 #FFFFFF;
         
 	}
 
   #header-logo img{
-    -moz-transition: all 2s linear 0s;
-    -webkit-transition: all 2s linear 0s;
-    -o-transition: all 2s linear 0s;
-    transition: all 2s linear 0s;
+    -moz-transition: all 1s linear 0s;
+    -webkit-transition: all 1s linear 0s;
+    -o-transition: all 1s linear 0s;
+    transition: all 1s linear 0s;
 
   }
   
@@ -356,7 +356,9 @@ ul.menu li span {
   }
   
   #portfolio h4 {
-    color: #333;
+    color: #999999;
+    font-style: italic;
+    font-weight: normal;    
     display: inline;
     font-size: 0.9em;
     line-height: 0.9em;
@@ -423,11 +425,11 @@ ul.menu li span {
   
   #header-logo img {
 
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  transform: rotate(360deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
 
   
   }

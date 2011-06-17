@@ -41,7 +41,7 @@
         <div id="header" class="clearfix">
             <aside id="header-logo">
               <figure>
-                <a href="/" title="ryck"><img src="img/logodr-128r.png" alt="ryck" width="64" height="64"></a>
+                <a href="home" title="ryck"><img src="img/logodr-128r.png" alt="ryck" width="64" height="64"></a>
               </figure>
             </aside>
         
@@ -56,9 +56,10 @@
     <div id="content" class="clearfix">
     
       <section id="showcase" class="clearfix">
-        <article>
+        
+        <article class="clearfix">
           <figure>
-            <a href="#" title="Screenshot"><img src="http://placekitten.com/450/360" alt="Screenshot"></a>
+            <a href="#" title="Screenshot"><img src="http://lorempixum.com/450/360/sports/" alt="Screenshot"></a>
           </figure>
             <aside>
               <h3><a href="#">Description</a></h3>
@@ -69,9 +70,9 @@
             </aside>
         </article>
 
-         <article>
+         <article class="clearfix">
           <figure>
-            <a href="#" title="Screenshot"><img src="http://placekitten.com/450/360" alt="Screenshot"></a>
+            <a href="#" title="Screenshot"><img src="http://lorempixum.com/450/360/food/" alt="Screenshot"></a>
           </figure>
             <aside>
               <h3><a href="#">Description</a></h3>
@@ -83,9 +84,9 @@
             </aside>
         </article>
         
-        <article>
+        <article class="clearfix">
           <figure>
-            <a href="#" title="Screenshot"><img src="http://placekitten.com/450/360" alt="Screenshot"></a>
+            <a href="#" title="Screenshot"><img src="http://lorempixum.com/450/360/people/" alt="Screenshot"></a>
           </figure>
             <aside>
               <h3><a href="#">Description</a></h3>
@@ -98,9 +99,9 @@
             </aside>
         </article>
         
-        <article>
+        <article class="clearfix">
           <figure>
-            <a href="#" title="Screenshot"><img src="http://placekitten.com/450/360" alt="Screenshot"></a>
+            <a href="#" title="Screenshot"><img src="http://lorempixum.com/450/360/animals/" alt="Screenshot"></a>
           </figure>
             <aside>
               <h3><a href="#">Description</a></h3>
@@ -117,9 +118,9 @@
             </aside>
         </article>                
 
-        <article>
+        <article class="clearfix">
           <figure>
-            <a href="#" title="Screenshot"><img src="http://placekitten.com/450/360" alt="Screenshot"></a>
+            <a href="#" title="Screenshot"><img src="http://lorempixum.com/450/360/nature/" alt="Screenshot"></a>
           </figure>
             <aside>
               <h3><a href="#">Description</a></h3>

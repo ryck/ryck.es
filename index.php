@@ -41,7 +41,7 @@
         <div id="header" class="clearfix">
             <aside id="header-logo">
               <figure>
-                <a href="/" title="ryck"><img src="img/logodr-128r.png" alt="ryck" width="64" height="64"></a>
+                <a href="home" title="ryck"><img src="img/logodr-128r.png" alt="ryck" width="64" height="64"></a>
               </figure>
             </aside>
         
@@ -70,7 +70,7 @@
                   <div class="adr">
                       <span class="locality">Roehampton</span>, <span class="region">London</span>
                       
-                      <span class="postal-code">SW15 4AL</span>
+                      <span class="postal-code">SW154AL</span>
                       
                       (<span class="country-name">UK</span>)
                       <span class="geo">
@@ -79,7 +79,7 @@
                       </span>
                   </div>
                   
-                  <div class="tel"><span class="type">Work</span>:<span class="value"> 07783949781</span></div>
+                  <div class="tel"><span class="type">Work</span>:<span class="value">+07783949781</span></div>
                   <div class="dcard"><a type="text/directory" title="download vCard" class="card" href="http://h2vx.com/vcf/ryck.me/resume">vCard</a> <a type="text/directory" title="download r&eacute;sum&eacute;" class="cv" href="CV_Ricardo_Gonzalez.pdf">CV</a></div>
                   
                   <!--<a class="url gtalk" href="xmpp:rickgc@gmail.com">gTalk</a> &mdash; <a class="url msn" href="msnim:chat?contact=rick_gc@hotmail.com">MSN</a>  &mdash; <a class="url skype" href="skype:echo?call">Skype</a>-->
