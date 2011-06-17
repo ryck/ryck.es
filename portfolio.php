@@ -64,11 +64,7 @@
               <h3><a href="#">Description</a></h3>
               <h4>Web Developer</h4>
               <ul class="skill-set">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Drupal</li>
-                <li>WordPress</li>
-                <li>Resposive</li>          
+                <li>HTML5</li>     
               </ul>
             </aside>
         </article>
@@ -82,24 +78,7 @@
               <h4>Web Developer</h4>
               <ul class="skill-set">
                 <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Resposive</li>
-                <li>WordPress</li>
-                <li>Resposive</li>              
-              </ul>
-            </aside>
-        </article>
-        
-        <article>
-          <figure>
-            <a href="#" title="Screenshot"><img src="http://placekitten.com/450/360" alt="Screenshot"></a>
-          </figure>
-            <aside>
-              <h3><a href="#">Description</a></h3>
-              <h4>Web Developer</h4>
-              <ul class="skill-set">
-                <li>HTML5</li>
-                <li>CSS3</li>           
+                <li>CSS3</li>         
               </ul>
             </aside>
         </article>
@@ -114,9 +93,43 @@
               <ul class="skill-set">
                 <li>HTML5</li>
                 <li>CSS3</li>
+                <li>Drupal</li>                                      
+              </ul>
+            </aside>
+        </article>
+        
+        <article>
+          <figure>
+            <a href="#" title="Screenshot"><img src="http://placekitten.com/450/360" alt="Screenshot"></a>
+          </figure>
+            <aside>
+              <h3><a href="#">Description</a></h3>
+              <h4>Web Developer</h4>
+              <ul class="skill-set">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Drupal</li>
+                <li>ohmygodyouaresoawesome</li>
               </ul>
             </aside>
         </article>                
+
+        <article>
+          <figure>
+            <a href="#" title="Screenshot"><img src="http://placekitten.com/450/360" alt="Screenshot"></a>
+          </figure>
+            <aside>
+              <h3><a href="#">Description</a></h3>
+              <h4>Web Developer</h4>
+              <ul class="skill-set">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Drupal</li>
+                <li>ohmygodyouaresoawesome</li>
+                <li>foobar</li>
+              </ul>
+            </aside>
+        </article>     
                         
       </section>
     
