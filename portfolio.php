@@ -62,14 +62,13 @@
           </figure>
             <aside>
               <h3><a href="#">Description</a></h3>
+              <h4>Web Developer</h4>
               <ul class="skill-set">
                 <li>HTML5</li>
                 <li>CSS3</li>
                 <li>Drupal</li>
                 <li>WordPress</li>
-                <li>Resposive</li>
-                <li>WordPress</li>
-                <li>Resposive</li>              
+                <li>Resposive</li>          
               </ul>
             </aside>
         </article>
@@ -80,11 +79,10 @@
           </figure>
             <aside>
               <h3><a href="#">Description</a></h3>
+              <h4>Web Developer</h4>
               <ul class="skill-set">
                 <li>HTML5</li>
                 <li>CSS3</li>
-                <li>Drupal</li>
-                <li>WordPress</li>
                 <li>Resposive</li>
                 <li>WordPress</li>
                 <li>Resposive</li>              
@@ -98,14 +96,10 @@
           </figure>
             <aside>
               <h3><a href="#">Description</a></h3>
+              <h4>Web Developer</h4>
               <ul class="skill-set">
                 <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Drupal</li>
-                <li>WordPress</li>
-                <li>Resposive</li>
-                <li>WordPress</li>
-                <li>Resposive</li>              
+                <li>CSS3</li>           
               </ul>
             </aside>
         </article>
@@ -116,14 +110,10 @@
           </figure>
             <aside>
               <h3><a href="#">Description</a></h3>
+              <h4>Web Developer</h4>
               <ul class="skill-set">
                 <li>HTML5</li>
                 <li>CSS3</li>
-                <li>Drupal</li>
-                <li>WordPress</li>
-                <li>Resposive</li>
-                <li>WordPress</li>
-                <li>Resposive</li>              
               </ul>
             </aside>
         </article>                

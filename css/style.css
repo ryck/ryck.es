@@ -351,6 +351,18 @@ ul.menu li span {
 
   }
   
+  #portfolio  h3 {
+  
+  }
+  
+  #portfolio h4 {
+    color: #333;
+    display: inline;
+    font-size: 0.9em;
+    line-height: 0.9em;
+    text-shadow: 0 1px 0 #FFFFFF;  
+  }
+  
 /**
  * Non-semantic helper classes: please define your styles before this section.
  */
@@ -553,6 +565,10 @@ ul.menu li span {
     max-width: 100%
   }  
   
+  .ie6 #portfolio article figure img {
+    width: 100%
+  }  
+    
   #portfolio article figure figcaption {
 
   }  
@@ -778,6 +794,10 @@ ul.menu li span {
     max-width: 100%
   }  
   
+  .ie6 #portfolio article figure img {
+    width: 100%
+  }  
+    
 
   
   #portfolio section hr {
@@ -789,8 +809,8 @@ ul.menu li span {
   }
 
   #portfolio section article figure img {
-    opacity: 0.6;
-    filter: alpha(opacity=0.6);
+    opacity: 0.8;
+    filter: alpha(opacity=0.8);
     -webkit-transition: opacity 0.3s linear;
     -moz-transition: opacity 0.3s linear;
     -o-transition: opacity 0.3s linear;
