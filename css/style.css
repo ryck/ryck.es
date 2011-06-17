@@ -195,7 +195,7 @@ a:hover { color: #036; }
 		text-decoration: none;
 		width: auto; 
 		height: 29px; 
-		padding: 0px 60px; 
+		padding: 0px 2em; 
 		line-height: 30px; 
 		border: solid 1px #ddd;
 		border-width: 1px 0 1px 1px; 
@@ -343,6 +343,14 @@ ul.menu li span {
         
 	}
 
+  #header-logo img{
+    -moz-transition: all 2s ease 0s;
+    -webkit-transition: all 2s ease 0s;
+    -o-transition: all 2s ease 0s;
+    transition: all 2s ease 0s;
+
+  }
+  
 /**
  * Non-semantic helper classes: please define your styles before this section.
  */
@@ -382,10 +390,35 @@ ul.menu li span {
 @media all and (orientation:portrait) {
   /* Style adjustments for portrait mode goes here */
 
+    #header-logo img {
+
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+
+  
+  }
+
 }
 
 @media all and (orientation:landscape) {
   /* Style adjustments for landscape mode goes here */
+
+
+  
+  
+  #header-logo img {
+
+  -webkit-transform: rotate(720deg);
+  -moz-transform: rotate(720deg);
+  -ms-transform: rotate(720deg);
+  -o-transform: rotate(720deg);
+  transform: rotate(720deg);
+
+  
+  }
 
 }
 
@@ -410,8 +443,7 @@ ul.menu li span {
     border: 1px solid #DDDDDD;
     padding: 3px;
     margin: 10px 0 10px 0;
-    background-color: #F4F4F4;
-    background-image: -moz-linear-gradient(#F4F4F4, #ECECEC);      
+    background-color: #FFF;      
     box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);
   }
   #resume article {
@@ -547,6 +579,8 @@ ul.menu li span {
      	
 	}  
   
+
+  
   /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
 }/*mediaquery*/
@@ -579,12 +613,8 @@ ul.menu li span {
     height: 64px;
     width: 64px;
     float: left;
-    /*
-    -moz-transition: all 2s ease 0s;
-    -webkit-transition: all 2s ease 0s;
-    -o-transition: all 2s ease 0s;
-    transition: all 2s ease 0s;
-    */
+
+
   }
   
   #header-logo img:hover {
