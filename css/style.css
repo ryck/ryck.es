@@ -542,7 +542,7 @@ ul.menu li span {
   
   #portfolio article {
     margin: 15px auto;
-    width: 283px;
+    width: 95%;
   }
   
   #portfolio article figure {
@@ -550,10 +550,9 @@ ul.menu li span {
   }
   
   #portfolio article figure img {
-    border: 1px solid #DDDDDD;
-    box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);    
-    padding: 3px;
+    max-width: 100%
   }  
+  
   #portfolio article figure figcaption {
 
   }  
@@ -756,23 +755,30 @@ ul.menu li span {
   
   #portfolio article {
     float: left;
-    margin: 15px 10px;
-    width: 285px;
+    width: 48.806941432%;
+    margin: 0 0 1em 0;
+    
   }
   
   #portfolio article figure {
-    
+    float: left;
+    width: 55%;
   }
+  #portfolio article aside {
+    float: right;
+    width: 40%;
+  }  
+    
   
   #portfolio article figure img {
     float: left;
     border: 1px solid #DDDDDD;
     box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);    
     padding: 3px;
+    max-width: 100%
   }  
-  #portfolio article figure figcaption {
+  
 
-  }  
   
   #portfolio section hr {
   background: url("../img/hr2.png") repeat-x scroll center center transparent;
