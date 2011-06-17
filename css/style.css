@@ -585,24 +585,6 @@ ul.menu li span {
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
 }/*mediaquery*/
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-  /* Styles */
-}/*/mediaquery*/
-
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-  /* Styles */
-}/*/mediaquery*/
-
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-  /* Styles */
-}/*/mediaquery*/
-
-
 @media only screen and (min-width: 481px) {
 /* Styles */
 
@@ -828,8 +810,24 @@ ul.menu li span {
           
 }/*/mediaquery*/
 
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  /* Styles */
+}/*/mediaquery*/
 
-@media only screen and (min-width: 1025px) {
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  /* Styles */
+}/*/mediaquery*/
+
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  /* Styles */
+}/*/mediaquery*/
+
+@media only screen and (min-width: 1024px) {
   #wrapper-content {
     margin: 0 auto;
     width:960px;
