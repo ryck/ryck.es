@@ -109,7 +109,10 @@
                 <li>HTML5</li>
                 <li>CSS3</li>
                 <li>Drupal</li>
-                <li>ohmygodyouaresoawesome</li>
+                <li>oh my</li>
+                <li>god</li>
+                <li>you are</li>
+                <li>awesome</li>
               </ul>
             </aside>
         </article>                
@@ -125,7 +128,6 @@
                 <li>HTML5</li>
                 <li>CSS3</li>
                 <li>Drupal</li>
-                <li>ohmygodyouaresoawesome</li>
                 <li>foobar</li>
               </ul>
             </aside>

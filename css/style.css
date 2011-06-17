@@ -454,7 +454,7 @@ ul.menu li span {
     border-radius: 0.2em; 
     border: 1px solid #DDDDDD;
     padding: 3px;
-    margin: 10px 0 10px 0;
+    margin: 1em 0;
     background-color: #FFF;      
     box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);
   }
@@ -562,7 +562,7 @@ ul.menu li span {
   }
   
   #portfolio article figure img {
-    max-width: 100%
+    width: 100%
   }  
   
   .ie6 #portfolio article figure img {
