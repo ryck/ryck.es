@@ -223,8 +223,81 @@
               </ul>
             </aside>
         </article>  
-                
-                                                
+
+        <article class="clearfix">
+          <figure>
+            <a href="http://eidolocal.es/portal/" title="eidolocal'"><img src="img/portfolio/eidolocal.png" alt="eidolocal'"></a>
+          </figure>
+            <aside>
+              <h3><a href="http://eidolocal.es/portal/">eidolocal</a></h3>
+              <h4>Web Developer</h4>
+              <ul class="skill-set">
+                <li>OpenCMS</li>
+                <li>JSP</li>
+                <li>VBScript</li>
+                <li>Theming</li>
+              </ul>
+            </aside>
+        </article>                  
+
+        <article class="clearfix">
+          <figure>
+            <a href="http://www.clustermadeira.com/" title="Cluster Madeira"><img src="img/portfolio/clustermadera.png" alt="Cluster Madeira"></a>
+          </figure>
+            <aside>
+              <h3><a href="http://www.clustermadeira.com/">Cluster Madeira</a></h3>
+              <h4>Web Developer / Designer</h4>
+              <ul class="skill-set">
+                <li>Drupal</li>
+                <li>Theming</li>
+                <li>Custom Modules</li>
+              </ul>
+            </aside>
+        </article>
+        
+        <article class="clearfix">
+          <figure>
+            <a href="http://www.redementores.com/" title="Rede Mentoring"><img src="img/portfolio/redementoring.png" alt="Rede Mentoring"></a>
+          </figure>
+            <aside>
+              <h3><a href="http://www.redementores.com/">Rede Mentoring</a></h3>
+              <h4>Web Developer / Designer</h4>
+              <ul class="skill-set">
+                <li>Drupal</li>
+                <li>Theming</li>
+              </ul>
+            </aside>
+        </article>
+        
+        <article class="clearfix">
+          <figure>
+            <a href="http://www.observatoriodalinguagalega.com/" title="Observatorio da Lingua Galega "><img src="img/portfolio/observatoriolinguagalega.png" alt="Observatorio da Lingua Galega "></a>
+          </figure>
+            <aside>
+              <h3><a href="http://www.observatoriodalinguagalega.com/">Observatorio da Lingua Galega </a></h3>
+              <h4>Web Developer / Designer</h4>
+              <ul class="skill-set">
+                <li>Drupal</li>
+                <li>Theming</li>
+                <li>i18n</li>
+              </ul>
+            </aside>
+        </article>
+        
+        <article class="clearfix">
+          <figure>
+            <a href="http://www.ptgn.net/" title="PTGN"><img src="img/portfolio/ptgn.png" alt="PTGN"></a>
+          </figure>
+            <aside>
+              <h3><a href="http://www.ptgn.net/">PTGN</a></h3>
+              <h4>Web Developer / Designer</h4>
+              <ul class="skill-set">
+                <li>Drupal</li>
+                <li>Theming</li>
+              </ul>
+            </aside>
+        </article>
+                                                                                      
       </section>
     
     
