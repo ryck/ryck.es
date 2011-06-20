@@ -64,30 +64,31 @@
           </figure>
             <aside>
               <h3><a href="#">ryck.me</a></h3>
-              <h4>designer / developer</h4>
+              <h4>Web Developer / Designer</h4>
               <ul class="skill-set">
                 <li>HTML5</li>     
                 <li>CSS3</li>
-                <li>mobile 1st</li>
-                <li>responsive</li>
+                <li>Mobile 1st</li>
+                <li>Responsive</li>
+                <li>Microformats</li>
               </ul>
             </aside>
         </article>
 
          <article class="clearfix">
           <figure>
-            <a href="defaqto.com" title="defaqto"><img src="http://lorempixum.com/450/360/food/" alt="defaqto"></a>
+            <a href="defaqto.com" title="defaqto"><img src="img/portfolio/defaqto.png" alt="defaqto"></a>
           </figure>
             <aside>
               <h3><a href="#">defaqto</a></h3>
               <h4>senior PHP developer </h4>
               <ul class="skill-set">
                 <li>Drupal</li>
-                <li>custom modules</li>   
-                <li>theming</li>
-                <li>high traffic</li>   
-                <li>webservices</li>
-                <li>deployment</li>                                                                                                       
+                <li>Custom Modules</li>   
+                <li>Theming</li>
+                <li>High Traffic</li>   
+                <li>Webservices</li>
+                <li>Deployment</li>                                                                                                       
               </ul>
             </aside>
         </article>
@@ -98,50 +99,132 @@
           </figure>
             <aside>
               <h3><a href="#">J. Rey</a></h3>
-              <h4>Web Developer</h4>
+              <h4>Web Developer / Designer</h4>
               <ul class="skill-set">
                 <li>CodeIgniter</li>
-                <li>design</li>
-                <li>custom features</li>                                      
+                <li>Design</li>
+                <li>Custom Features</li>                                      
               </ul>
             </aside>
         </article>
         
         <article class="clearfix">
           <figure>
-            <a href="#" title="Screenshot"><img src="http://lorempixum.com/450/360/animals/" alt="Screenshot"></a>
+            <a href="http://www.balnegal.com" title="Balnegal"><img src="img/portfolio/balnegal.png" alt="Balnegal"></a>
           </figure>
             <aside>
-              <h3><a href="#">Description</a></h3>
-              <h4>Web Developer</h4>
+              <h3><a href="http://www.balnegal.com">Balnegal</a></h3>
+              <h4>Web Developer / Designer</h4>
               <ul class="skill-set">
-                <li>HTML5</li>
-                <li>CSS3</li>
                 <li>Drupal</li>
-                <li>oh my</li>
-                <li>god</li>
-                <li>you are</li>
-                <li>awesome</li>
+                <li>Theming</li>
+                <li>i18n</li>
+                <li>Custom ERP Connection</li>
+                <li>WordPress Blog</li>
+                <li>SEO</li>
+                <li>Google Maps</li>
+                <li>Twitter Integration</li>
+                <li>Custom Modules</li>
               </ul>
             </aside>
         </article>                
 
         <article class="clearfix">
           <figure>
-            <a href="#" title="Screenshot"><img src="http://lorempixum.com/450/360/nature/" alt="Screenshot"></a>
+            <a href="http://www.moblegal.com" title="Moblegal"><img src="img/portfolio/moblegal.png" alt="Moblegal"></a>
           </figure>
             <aside>
-              <h3><a href="#">Description</a></h3>
-              <h4>Web Developer</h4>
+              <h3><a href="http://www.moblegal.com">Moblegal</a></h3>
+              <h4>Web Developer / Designer</h4>
               <ul class="skill-set">
-                <li>HTML5</li>
+                <li>Drupal</li>
+                <li>Theming</li>
+                <li>i18n</li>
                 <li>CSS3</li>
                 <li>Drupal</li>
                 <li>foobar</li>
               </ul>
             </aside>
         </article>     
-                        
+    
+        <article class="clearfix">
+          <figure>
+            <a href="http://www.luamar.com" title="Luamar"><img src="img/portfolio/luamar.png" alt="Luamar"></a>
+          </figure>
+            <aside>
+              <h3><a href="http://www.luamar.com">Moblegal</a></h3>
+              <h4>Web Developer / Designer</h4>
+              <ul class="skill-set">
+                <li>ASP</li>
+                <li>Booking System</li>
+                <li>Theming</li>
+              </ul>
+            </aside>
+        </article>    
+                    
+        <article class="clearfix">
+          <figure>
+            <a href="#" title="Dielectro"><img src="img/portfolio/dielectro.png" alt="Dielectro"></a>
+          </figure>
+            <aside>
+              <h3><a href="#">Dielectro</a></h3>
+              <h4>Web Developer / Designer</h4>
+              <ul class="skill-set">
+                <li>Drupal</li>
+                <li>Theming</li>
+              </ul>
+            </aside>
+        </article>
+        
+        <article class="clearfix">
+          <figure>
+            <a href="http://ardora.es" title="Ardora"><img src="img/portfolio/ardora.png" alt="Ardora"></a>
+          </figure>
+            <aside>
+              <h3><a href="http://ardora.es">Ardora</a></h3>
+              <h4>Web Developer / Designer</h4>
+              <ul class="skill-set">
+                <li>Design</li>
+                <li>Logo</li>
+                <li>i18n</li>
+                <li>Weather API</li>
+              </ul>
+            </aside>
+        </article>           
+
+        <article class="clearfix">
+          <figure>
+            <a href="http://mdgonzalez.es" title="mdgonzalez"><img src="img/portfolio/mdgonzalez.png" alt="mdgonzalez"></a>
+          </figure>
+            <aside>
+              <h3><a href="http://mdgonzalez.es">Mª Dolores González Lago</a></h3>
+              <h4>Web Developer / Designer</h4>
+              <ul class="skill-set">
+                <li>Design</li>
+                <li>Logo</li>
+                <li>Cardsite</li>
+                <li>i18n</li>
+                <li>jQuery</li>
+              </ul>
+            </aside>
+        </article>
+        
+        <article class="clearfix">
+          <figure>
+            <a href="http://rick.jinlabs.com" title="Rick's HideOut'"><img src="img/portfolio/rickjinlabs.png" alt="Rick's HideOut'"></a>
+          </figure>
+            <aside>
+              <h3><a href="http://rick.jinlabs.com">Rick's HideOut</a></h3>
+              <h4>Web Developer / Designer</h4>
+              <ul class="skill-set">
+                <li>WordPress</li>
+                <li>Theming</li>
+                <li>Custom Plugins</li>
+              </ul>
+            </aside>
+        </article>  
+                
+                                                
       </section>
     
     
@@ -175,7 +258,7 @@
 
   <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
   <script>
-    var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+    var _gaq=[["_setAccount","UA-24074929-1"],["_trackPageview"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
     g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
     s.parentNode.insertBefore(g,s)}(document,"script"));
