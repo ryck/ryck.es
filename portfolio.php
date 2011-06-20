@@ -48,6 +48,7 @@
             <nav id="main-menu">    
               <ul class="tabs">
                 <li><a href="home">Home</a></li>
+                <li><a href="resume">Résumé</a></li>
                 <li><a class="active" href="portfolio">Portfolio</a></li>
                 <li><a href="contact">Contact</a></li>
               </ul>
@@ -59,42 +60,49 @@
         
         <article class="clearfix">
           <figure>
-            <a href="#" title="Screenshot"><img src="http://lorempixum.com/450/360/sports/" alt="Screenshot"></a>
+            <a href="http://ryck.me" title="ryck.me"><img src="img/portfolio/ryck.es.png" alt="ryck.me"></a>
           </figure>
             <aside>
-              <h3><a href="#">Description</a></h3>
-              <h4>Web Developer</h4>
+              <h3><a href="#">ryck.me</a></h3>
+              <h4>designer / developer</h4>
               <ul class="skill-set">
                 <li>HTML5</li>     
+                <li>CSS3</li>
+                <li>mobile 1st</li>
+                <li>responsive</li>
               </ul>
             </aside>
         </article>
 
          <article class="clearfix">
           <figure>
-            <a href="#" title="Screenshot"><img src="http://lorempixum.com/450/360/food/" alt="Screenshot"></a>
+            <a href="defaqto.com" title="defaqto"><img src="http://lorempixum.com/450/360/food/" alt="defaqto"></a>
           </figure>
             <aside>
-              <h3><a href="#">Description</a></h3>
-              <h4>Web Developer</h4>
+              <h3><a href="#">defaqto</a></h3>
+              <h4>senior PHP developer </h4>
               <ul class="skill-set">
-                <li>HTML5</li>
-                <li>CSS3</li>         
+                <li>Drupal</li>
+                <li>custom modules</li>   
+                <li>theming</li>
+                <li>high traffic</li>   
+                <li>webservices</li>
+                <li>deployment</li>                                                                                                       
               </ul>
             </aside>
         </article>
         
         <article class="clearfix">
           <figure>
-            <a href="#" title="Screenshot"><img src="http://lorempixum.com/450/360/people/" alt="Screenshot"></a>
+            <a href="http://jrey.es" title="J Rey"><img src="img/portfolio/jrey.png" alt="J Rey"></a>
           </figure>
             <aside>
-              <h3><a href="#">Description</a></h3>
+              <h3><a href="#">J. Rey</a></h3>
               <h4>Web Developer</h4>
               <ul class="skill-set">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Drupal</li>                                      
+                <li>CodeIgniter</li>
+                <li>design</li>
+                <li>custom features</li>                                      
               </ul>
             </aside>
         </article>
