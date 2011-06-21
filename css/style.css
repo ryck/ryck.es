@@ -134,8 +134,7 @@ input:invalid, textarea:invalid {
 ::selection { background:#FF5E99; color:#fff; text-shadow: none; }
 */
 
-/* j.mp/webkit-tap-highlight-color */
-a:link { -webkit-tap-highlight-color: #FF5E99; }
+
 
 /* Make buttons play nice in IE:
    www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
@@ -338,7 +337,7 @@ ul.menu li span {
     float: left;
     font-size: 0.75em;
     line-height: 0.75em;
-    margin: 2px;
+    margin: 2px 2px 2px 0;
     padding: 4px;
     text-shadow: 0 1px 0 #FFFFFF;
         
@@ -353,7 +352,8 @@ ul.menu li span {
   }
   
   #portfolio  h3 {
-  
+    font-size: 0.9em;
+    line-height: 0.9em;
   }
   
   #portfolio h4 {
@@ -451,12 +451,12 @@ ul.menu li span {
   #resume hgroup img.photo, header figure {
     display: none; visibility: hidden;
   }
-  section {
+  #resume section, #portfolio article {
     -webkit-border-radius: 0.2em; 
     -moz-border-radius: 0.2em; 
     border-radius: 0.2em; 
     border: 1px solid #DDDDDD;
-    padding: 3px;
+    padding: 10px;
     margin: 1em 0;
     background-color: #FFF;      
     box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);
@@ -788,22 +788,7 @@ ul.menu li span {
     
   }
   
-  #portfolio article {
-    float: left;
-    width: 48.806941432%;
-    margin: 0 0 1em 0;
-    
-  }
-  
-  #portfolio article figure {
-    float: left;
-    width: 55%;
-  }
-  #portfolio article aside {
-    float: right;
-    width: 40%;
-  }  
-    
+
   
   #portfolio article figure img {
     float: left;
@@ -878,6 +863,20 @@ ul.menu li span {
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
   /* Styles */
+  
+  #portfolio article {
+      margin: 0 0 1em;
+  }
+    
+  #portfolio article figure {
+      float: left;
+      width: 50%;
+  }
+  #portfolio article aside {
+      float: right;
+      width: 45%;
+  }  
+  
 }/*/mediaquery*/
 
 @media only screen and (min-width: 1024px) {
@@ -885,6 +884,23 @@ ul.menu li span {
     margin: 0 auto;
     width:960px;
   }
+  
+  #portfolio article {
+    float: left;
+    width: 48.806941432%;
+    margin: 0 0 1em 0;
+    
+  }
+  
+  #portfolio article figure {
+    float: left;
+    width: 55%;
+  }
+  #portfolio article aside {
+    float: right;
+    width: 41%;
+  }  
+      
 }/*/mediaquery*/
 
 /**
