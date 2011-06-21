@@ -460,6 +460,7 @@ ul.menu li span {
     margin: 1em 0;
     background-color: #FFF;      
   }
+  
   #resume article {
     margin: 5px 5px 5px;
   }
@@ -562,12 +563,10 @@ ul.menu li span {
   #portfolio article figure {
     margin: 0 0 .5em 0;
     border: 1px solid #DDD;
-    float: left;
   }
   
   #portfolio article figure img {
-    max-width: 100%;
-    float: left;
+    width: 100%;
   }  
   
   .ie6 #portfolio article figure img {
