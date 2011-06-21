@@ -808,21 +808,17 @@ ul.menu li span {
   }
 
   #portfolio section article figure img {
-    opacity: 0.8;
-    filter: alpha(opacity=0.8);
-    -webkit-transition: opacity 0.3s linear;
-    -moz-transition: opacity 0.3s linear;
-    -o-transition: opacity 0.3s linear;
-    transition: opacity 0.3s linear; 
+    -webkit-transition-duration: 0.5s; /*Webkit: Animation duration*/
+    -moz-transition-duration: 0.5s; /*Mozilla duration version*/
+    -o-transition-duration: 0.5s; /*Opera duration version*/
+    z-index: 1;
 	}
  
   #portfolio section article figure img:hover {
-    opacity: 1;
-    filter: alpha(opacity=1);
-    -webkit-transition: opacity 0.3s linear;
-    -moz-transition: opacity 0.3s linear;
-    -o-transition: opacity 0.3s linear;
-    transition: opacity 0.3s linear;  
+    -webkit-box-shadow:0px 0px 15px gray; /*Safari shadow version*/
+    -moz-box-shadow:0px 0px 15px gray; /*Mozilla shadow version*/
+    box-shadow:0px 0px 15px gray; /*CSS3 shadow: 30px blurred shadow all around image*/    
+    z-index: 5;
 	}
   
 	.skill-set li {

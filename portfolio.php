@@ -297,6 +297,22 @@
               </ul>
             </aside>
         </article>
+        
+        <article class="clearfix">
+          <figure>
+            <a href="http://www.ryck.me/i" title="Ryck"><img src="img/portfolio/ryck.me-mobile.png" alt="ryck"></a>
+          </figure>
+            <aside>
+              <h3><a href="http://www.ryck.me/i/">ryck.me (mobile)</a></h3>
+              <h4>Web Developer / Designer</h4>
+              <ul class="skill-set">
+                <li>mobile</li>
+                <li>UI Kit</li>
+                <li>deprecated</li>
+              </ul>
+            </aside>
+        </article>
+                             
                                                                                       
       </section>
     
