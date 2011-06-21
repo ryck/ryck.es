@@ -459,7 +459,6 @@ ul.menu li span {
     padding: 10px;
     margin: 1em 0;
     background-color: #FFF;      
-    box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);
   }
   #resume article {
     margin: 5px 5px 5px;
@@ -557,16 +556,18 @@ ul.menu li span {
   }
   
   #portfolio article {
-    margin: 15px auto;
-    width: 95%;
+
   }
   
   #portfolio article figure {
-    margin: 0 auto;
+    margin: 0 0 .5em 0;
+    border: 1px solid #DDD;
+    float: left;
   }
   
   #portfolio article figure img {
-    width: 100%
+    max-width: 100%;
+    float: left;
   }  
   
   .ie6 #portfolio article figure img {
@@ -792,9 +793,7 @@ ul.menu li span {
   
   #portfolio article figure img {
     float: left;
-    border: 1px solid #DDDDDD;
     box-shadow: 1px 1px 7px rgba(153, 153, 153, 0.2);    
-    padding: 3px;
     max-width: 100%
   }  
   
@@ -848,6 +847,29 @@ ul.menu li span {
           
 }/*/mediaquery*/
 
+
+
+/* gap ----------- */
+@media only screen and (min-width : 676px) and (max-width : 1024px){
+  /* Styles */
+  
+  #portfolio article {
+      margin: 0 0 1em;
+  }
+    
+  #portfolio article figure {
+      float: left;
+      width: 50%;
+      border: 1px solid #DDDDDD;
+  }
+  #portfolio article aside {
+      float: right;
+      width: 45%;
+  }    
+}/*/mediaquery*/
+
+
+
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
   /* Styles */
@@ -861,21 +883,10 @@ ul.menu li span {
 
 
 /* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
   /* Styles */
   
-  #portfolio article {
-      margin: 0 0 1em;
-  }
-    
-  #portfolio article figure {
-      float: left;
-      width: 50%;
-  }
-  #portfolio article aside {
-      float: right;
-      width: 45%;
-  }  
+
   
 }/*/mediaquery*/
 
@@ -895,6 +906,7 @@ ul.menu li span {
   #portfolio article figure {
     float: left;
     width: 55%;
+    border: 1px solid #DDDDDD;
   }
   #portfolio article aside {
     float: right;
