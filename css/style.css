@@ -370,6 +370,7 @@ ul.menu li span {
     -moz-border-radius:15px;
     -webkit-border-radius:15px;
     border-radius:15px;
+    background: url("../img/stamp.png") no-repeat scroll right top transparent;
 
 }
 
@@ -398,6 +399,10 @@ ul.menu li span {
     border: 1px solid #DDD;
     margin-bottom:1em;
     padding:4px 0;
+}
+
+#contact-form #name, #contact-form #email {
+    width: 70%;
 }
 
 #contact-form input:focus,
