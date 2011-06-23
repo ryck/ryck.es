@@ -365,23 +365,13 @@ ul.menu li span {
   }
   
 #contact-form {
-    width: 60%;
+    width: 55%;
     float: right;
     -moz-border-radius:15px;
     -webkit-border-radius:15px;
     border-radius:15px;
     background: url("../img/stamp.png") no-repeat scroll right top transparent;
 
-}
-
-#contact-form h1 {
-    font-size:42px;
-}
-
-#contact-form h2 {
-    margin-bottom:15px;
-    font-style:italic;
-    font-weight:normal;
 }
 
 #contact-form input,
@@ -408,13 +398,14 @@ ul.menu li span {
 #contact-form input:focus,
 #contact-form select:focus,
 #contact-form textarea:focus {
-    border: 1px solid #DDD;
     background-color: #F7F7F7;
+    border: 1px solid #AAA;
+    outline: 0;    
+    
 }
 
 #contact-form textarea {
-    height:150px;
-    resize: none;
+
 }
 
 #contact-form label {
@@ -925,7 +916,6 @@ input.placeholder-text, textarea.placeholder-text  {
     line-height: 138.5%;
     margin: 1em 0 1em;
     padding: 1em;
-    text-shadow: 0 1px 3px #CFCFCF;
     background-color: #FFF;
     -webkit-border-radius: 0.2em; 
     -moz-border-radius: 0.2em; 

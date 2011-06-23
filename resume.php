@@ -69,7 +69,7 @@
                   <div class="nickname">Ryck</div>
                   <div class="bday">1979-10-15</div>
                   <div class="adr">
-                      <span class="locality">Roehampton</span>, <span class="region">London</span>
+                      <span class="region">London</span>
                       
                       <span class="postal-code">SW154AL</span>
                       
@@ -80,7 +80,7 @@
                       </span>
                   </div>
                   
-                  <div class="tel"><span class="type">Work</span>:<span class="value">+4407783949781</span></div>
+                  <div class="tel"><span class="type">Mobile</span>: <span class="value">+4407783949781</span></div>
                   <div class="dcard"><a type="text/directory" title="download vCard" class="card" href="http://h2vx.com/vcf/ryck.me/resume">vCard</a> <a type="text/directory" title="download r&eacute;sum&eacute;" class="cv" href="CV_Ricardo_Gonzalez.pdf">CV</a></div>
                   
                   <!--<a class="url gtalk" href="xmpp:rickgc@gmail.com">gTalk</a> &mdash; <a class="url msn" href="msnim:chat?contact=rick_gc@hotmail.com">MSN</a>  &mdash; <a class="url skype" href="skype:echo?call">Skype</a>-->

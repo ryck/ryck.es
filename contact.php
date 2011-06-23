@@ -56,7 +56,28 @@
         </div>        
     <div id="content" class="clearfix">
       <section id="contact-info">
+
+        <span class="honorific-prefix">Mr.</span>
+        <a class="url fn" href="http://ryck.me/">Ricardo Gonzalez</a>
+        &lt;<a class="email" href="mailto:info@ryck.me">info@ryck.me</a>&gt;
+        <div class="role">Web Developer / Designer</div>
+        <div class="nickname">Ryck</div>
+        <div class="bday">1979-10-15</div>
+        <div class="adr">
+            <span class="region">London</span>
+            
+            <span class="postal-code">SW154AL</span>
+            
+            (<span class="country-name">UK</span>)
+            <span class="geo">
+            <span class="latitude">51.44769</span>
+            <span class="longitude">-0.23619</span>
+            </span>
+        </div>
         
+        <div class="tel"><span class="type">Mobile</span>: <span class="value">+4407783949781</span></div>
+        <a class="url gtalk" href="xmpp:rickgc@gmail.com">gTalk</a> &mdash; <a class="url msn" href="msnim:chat?contact=rick_gc@hotmail.com">MSN</a>  &mdash; <a class="url skype" href="skype:echo?call">Skype</a>
+
       </section>
 
       <section id="contact-form">
@@ -73,7 +94,7 @@
             <input type="email" id="email" name="email" value="" placeholder="johndoe@example.com" required="required" />
 
             <label for="message">Message: <span class="required">*</span></label>
-            <textarea id="message" name="message" placeholder="Your message must be greater than 20 charcters" required="required" data-minlength="20"></textarea>
+            <textarea id="message" name="message" placeholder="Your message must be greater than 20 charcters" required="required" data-minlength="20" rows="6"></textarea>
 
             <span id="loading"></span>
             <input type="submit" value="Holla!" id="submit-button" />
