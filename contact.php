@@ -76,7 +76,7 @@
         </div>
         
         <div class="tel"><span class="type">Mobile</span>: <span class="value">+4407783949781</span></div>
-        <a class="url gtalk" href="xmpp:rickgc@gmail.com">gTalk</a> &mdash; <a class="url msn" href="msnim:chat?contact=rick_gc@hotmail.com">MSN</a>  &mdash; <a class="url skype" href="skype:echo?call">Skype</a>
+        <a class="url gtalk" href="xmpp:rickgc@gmail.com">gTalk</a> &mdash; <a class="url msn" href="msnim:chat?contact=rick_gc@hotmail.com">MSN</a>  &mdash; <a class="url skype" href="skype:ryckgc?call">Skype</a>
 
       </section>
 
