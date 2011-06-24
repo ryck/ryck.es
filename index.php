@@ -33,7 +33,7 @@
 
 </head>
 
-<body id="resume">
+<body id="home">
 
 <div id="wrapper">
     <div id="wrapper-content">
@@ -57,7 +57,7 @@
         </div>        
     <div id="content">
       <section>
-        Bla
+
       </section>
     </div>
         
