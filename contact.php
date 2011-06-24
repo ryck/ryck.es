@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
@@ -82,24 +83,44 @@
 
       <section id="contact-form">
 
-        <ul id="errors" class="">
-            <li id="info">There were some problems with your form submission:</li>
-        </ul>
-        <p id="success">Thanks for your message! We will get back to you ASAP!</p>
-        <form method="post" action="process.php">
-            <label for="name">Name: <span class="required">*</span></label>
-            <input type="text" id="name" name="name" value="" placeholder="John Doe" required="required" autofocus="autofocus" />
-
-            <label for="email">Email Address: <span class="required">*</span></label>
-            <input type="email" id="email" name="email" value="" placeholder="johndoe@example.com" required="required" />
-
-            <label for="message">Message: <span class="required">*</span></label>
-            <textarea id="message" name="message" placeholder="Your message must be greater than 20 charcters" required="required" data-minlength="20" rows="6"></textarea>
-
-            <span id="loading"></span>
-            <input type="submit" value="Submit" id="submit"  class="button"/>
-            <p id="req-field-desc"><span class="required">*</span> indicates a required field</p>
-        </form>
+            <?php
+			//init variables
+			$cf = array();
+			$sr = false;
+			
+			if(isset($_SESSION['cf_returndata'])){
+				$cf = $_SESSION['cf_returndata'];
+			 	$sr = true;
+			}
+            ?>
+            <ul id="errors" class="<?php echo ($sr && !$cf['form_ok']) ? 'visible' : ''; ?>">
+                <li id="info">There were some problems with your form submission:</li>
+                <?php 
+				if(isset($cf['errors']) && count($cf['errors']) > 0) :
+					foreach($cf['errors'] as $error) :
+				?>
+                <li><?php echo $error ?></li>
+                <?php
+					endforeach;
+				endif;
+				?>
+            </ul>
+            <p id="success" class="<?php echo ($sr && $cf['form_ok']) ? 'visible' : ''; ?>">Thanks for your message! We will get back to you ASAP!</p>
+            <form method="post" action="process.php">
+                <label for="name">Name: <span class="required">*</span></label>
+                <input type="text" id="name" name="name" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['name'] : '' ?>" placeholder="John Doe" required autofocus />
+                
+                <label for="email">Email Address: <span class="required">*</span></label>
+                <input type="email" id="email" name="email" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['email'] : '' ?>" placeholder="johndoe@example.com" required />
+                             
+                <label for="message">Message: <span class="required">*</span></label>
+                <textarea id="message" name="message" placeholder="Your message must be greater than 20 charcters" required data-minlength="20"><?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['message'] : '' ?></textarea>
+                
+                <span id="loading"></span>
+                <input type="submit" value="Submit" id="submit" />
+                <p id="req-field-desc"><span class="required">*</span> indicates a required field</p>
+            </form>
+            <?php unset($_SESSION['cf_returndata']); ?>
 
 
     

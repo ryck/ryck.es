@@ -532,19 +532,19 @@ ul.menu li span {
 
 #errors {
     border:solid 1px #E58E8E;
-    padding:10px;
-    margin:25px 0px;
+    margin: 0 0 1em;
+    padding: 0.5em 0;
     display:block;
-    width:437px;
-    -webkit-border-radius:8px;
-    -moz-border-radius:8px;
-    border-radius:8px;
-    background:#FFE6E6 url(../img/cancel_48.png) no-repeat 405px center;
+    -webkit-border-radius:.2em;
+    -moz-border-radius:.2em;
+    border-radius:.2em;
+    background:#FFE6E6;
     display:none;
+    font-size: 0.7em;
 }
 
 #errors li {
-    padding:2px;
+    padding:0 .5em;
     list-style:none;
 }
 
@@ -562,16 +562,16 @@ ul.menu li span {
 
 #success {
     border:solid 1px #83D186;
-    padding:25px 10px;
-    margin:25px 0px;
+    margin: 0 0 1em;
+    padding: 0.5em 0;
     display:block;
-    width:437px;
-    -webkit-border-radius:8px;
-    -moz-border-radius:8px;
-    border-radius:8px;
-    background:#D3EDD3 url(../img/accepted_48.png) no-repeat 405px center;
+    -webkit-border-radius:.2em;
+    -moz-border-radius:.2em;
+    border-radius:.2em;
+    background:#D3EDD3;
     font-weight:bold;
     display:none;
+    font-size: 0.7em;
 }
 
 #errors.visible, #success.visible {
@@ -1029,9 +1029,6 @@ input.placeholder-text, textarea.placeholder-text  {
   #languages ul, #hobbies ul, #references ul {
     margin-left: 0;
   }
-  #contact p {
-    margin: 1em 0 0 0;
-  }
   
   #portfolio section {
     
@@ -1095,7 +1092,7 @@ input.placeholder-text, textarea.placeholder-text  {
       background: url("../img/stamp.png") no-repeat scroll right top transparent;
   }
     
-  #contact-form #name, #contact-form #email {
+  #contact-form #name, #contact-form #email, #errors, #success {
     width: 60%;
   }            
           
