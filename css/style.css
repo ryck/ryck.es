@@ -852,7 +852,7 @@ input.placeholder-text, textarea.placeholder-text  {
   
   /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
-}/*mediaquery*/
+}
 
 @media only screen and (min-width: 676px) {
 /* Styles */
@@ -1096,7 +1096,7 @@ input.placeholder-text, textarea.placeholder-text  {
     width: 60%;
   }            
           
-}/*/mediaquery*/
+}
 
 
 
@@ -1121,20 +1121,20 @@ input.placeholder-text, textarea.placeholder-text  {
   #contact-form {
       background: url("../img/stamp.png") no-repeat scroll right top transparent;
   }  
-}/*/mediaquery*/
+}
 
 
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
   /* Styles */
-}/*/mediaquery*/
+}
 
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
   /* Styles */
-}/*/mediaquery*/
+}
 
 
 /* iPads (portrait) ----------- */
@@ -1143,7 +1143,7 @@ input.placeholder-text, textarea.placeholder-text  {
   
 
   
-}/*/mediaquery*/
+}
 
 @media only screen and (min-width: 1024px) {
   #wrapper-content {
@@ -1168,7 +1168,7 @@ input.placeholder-text, textarea.placeholder-text  {
     width: 41%;
   }  
       
-}/*/mediaquery*/
+}
 
 /**
  * Print styles.
