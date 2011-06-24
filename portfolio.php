@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>ryck.es - portfolio</title>
+  <title>ryck.me - portfolio</title>
 	<meta name="description" content="ryck.me - portfolio">
 	<meta name="author" content="Ricardo Gonzalez">
 

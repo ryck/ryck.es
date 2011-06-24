@@ -8,7 +8,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>ryck.es - contact</title>
+  <title>ryck.me - contact</title>
 	<meta name="description" content="ryck.me">
 	<meta name="author" content="Ricardo Gonzalez">
 
