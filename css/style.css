@@ -328,6 +328,59 @@ a:hover { color: #036; }
 		padding-right: 0 !important;
 		text-align: center; }
 		
+/* #Forms
+================================================== */
+
+	form { 
+		margin-bottom: 20px; }
+	fieldset { 
+		margin-bottom: 20px; }
+	input[type="text"], 
+	input[type="password"],
+	input[type="email"],
+	textarea, 
+	select {
+		border: 1px solid #ccc;
+		padding: 6px 4px;
+		outline: none;
+		-moz-border-radius: 2px;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #777;
+		margin: 0;
+		width: 210px;
+		max-width: 100%;
+		display: block;
+		margin-bottom: 20px;
+		background: #fff; }
+	select { 
+		padding: 0; }
+	input[type="text"]:focus,
+	input[type="password"]:focus,
+	input[type="email"]:focus, 
+	textarea:focus {
+		border: 1px solid #aaa;
+ 		color: #444;
+ 		-moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		-webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		box-shadow:  0 0 3px rgba(0,0,0,.2); }
+	textarea {
+		min-height: 60px; }
+	label,
+	legend { 
+		display: block;
+		font-weight: bold;
+		font-size: 13px;  }
+	select { 
+		width: 220px; }
+	input[type="checkbox"] {
+		display: inline; }
+	label span,
+	legend span {
+		font-weight: normal;
+		font-size: 13px;
+		color: #444; }		
 
 /**
  * Primary styles
@@ -440,35 +493,16 @@ ul.menu li span {
     text-shadow: 0 1px 0 #FFFFFF;  
   }
 
-#contact-form input,
-#contact-form select,
-#contact-form textarea,
-#contact-form label {
-    font-size:15px;
-    margin-bottom:2px;
-}
+
 
 #contact-form input,
 #contact-form select,
 #contact-form textarea {
     width:100%;
-    border: 1px solid #DDD;
     margin-bottom:1em;
     padding:4px 0;
 }
 
-#contact-form #name, #contact-form #email {
-    width: 60%;
-}
-
-#contact-form input:focus,
-#contact-form select:focus,
-#contact-form textarea:focus {
-    background-color: #F7F7F7;
-    border: 1px solid #AAA;
-    outline: 0;    
-    
-}
 
 #contact-form textarea {
 
@@ -483,24 +517,7 @@ ul.menu li span {
     color:#F00;
 }
 
-#contact-form #submit-button {
-    width: 100%;
-    background-color:#333;
-    color:#FFF;
-    border:none;
-    display:block;
-    background-color:#8FB5C1;
-    -moz-border-radius:8px;
-}
 
-#contact-form #submit-button:hover {
-    background-color: #A6CFDD;
-}
-
-#contact-form #submit-button:active {
-    position:relative;
-    top:1px;
-}
 
 #contact-form #loading {
     width:32px;
@@ -562,12 +579,11 @@ ul.menu li span {
 }
 
 #req-field-desc {
-    font-style:italic;
+    font-size: 0.8em;
+    font-style: italic;
+    text-align: right;
 }
-
-  #contact-form {
-      background: url("../img/stamp.png") no-repeat scroll right top transparent;
-  }    
+  
 /* Remove box shadow firefox, chrome and opera put around required fields. It looks rubbish. */
 input:required, textarea:required {
     -moz-box-shadow:none;
@@ -1077,7 +1093,11 @@ input.placeholder-text, textarea.placeholder-text  {
       width: 55%;
       float: right;
       background: url("../img/stamp.png") no-repeat scroll right top transparent;
-  }          
+  }
+    
+  #contact-form #name, #contact-form #email {
+    width: 60%;
+  }            
           
 }/*/mediaquery*/
 
@@ -1100,6 +1120,10 @@ input.placeholder-text, textarea.placeholder-text  {
       float: right;
       width: 45%;
   }    
+  
+  #contact-form {
+      background: url("../img/stamp.png") no-repeat scroll right top transparent;
+  }  
 }/*/mediaquery*/
 
 
