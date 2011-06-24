@@ -97,7 +97,7 @@
             <textarea id="message" name="message" placeholder="Your message must be greater than 20 charcters" required="required" data-minlength="20" rows="6"></textarea>
 
             <span id="loading"></span>
-            <input type="submit" value="Holla!" id="submit-button" />
+            <input type="submit" value="Submit" id="submit"  class="button"/>
             <p id="req-field-desc"><span class="required">*</span> indicates a required field</p>
         </form>
 
