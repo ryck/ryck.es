@@ -39,6 +39,7 @@ $(function(){
         errorNotice = $('#errors'),
         successNotice = $('#success'),
         loading = $('#loading'),
+        mainform = $('#main-contact-form');
         errorMessages = {
             required: ' is a required field',
             email: 'You have not entered a valid email address for the field: ',
@@ -168,6 +169,7 @@ $(function(){
         }
         //if form is valid
         else {
+          mainform.slideUp('fast');
         	loading.show();
             $.ajax({
                 url: form.attr('action'),
@@ -177,6 +179,7 @@ $(function(){
                     showNotice('success');
                     form.get(0).reset();
                     loading.hide();
+                    mainform.slideDown('fast');
                 }
             });
         }

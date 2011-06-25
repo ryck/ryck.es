@@ -520,14 +520,10 @@ ul.menu li span {
 
 
 #contact-form #loading {
-    width:32px;
-    height:32px;
-    background-image:url(../img/loading.gif);
-    display:block;
-    position:absolute;
-    right:130px;
-    bottom:16px;
-    display:none;
+    background: url("../img/loading.gif") no-repeat scroll center center transparent;
+    display: none;
+    height: 32px;
+    width: 100%;    
 }
 
 #errors {
@@ -563,7 +559,7 @@ ul.menu li span {
 #success {
     border:solid 1px #83D186;
     margin: 0 0 1em;
-    padding: 0.5em 0;
+    padding: 0.5em;
     display:block;
     -webkit-border-radius:.2em;
     -moz-border-radius:.2em;
@@ -1089,10 +1085,13 @@ input.placeholder-text, textarea.placeholder-text  {
   #contact-form {
       width: 55%;
       float: right;
-      background: url("../img/stamp.png") no-repeat scroll right top transparent;
   }
-    
-  #contact-form #name, #contact-form #email, #errors, #success {
+  
+  #main-contact-form {
+    background: url("../img/stamp.png") no-repeat scroll right top transparent;
+  } 
+     
+  #contact-form #name, #contact-form #email {
     width: 60%;
   }            
           
@@ -1118,7 +1117,7 @@ input.placeholder-text, textarea.placeholder-text  {
       width: 45%;
   }    
   
-  #contact-form {
+  #main-contact-form {
       background: url("../img/stamp.png") no-repeat scroll right top transparent;
   }  
 }

@@ -107,7 +107,7 @@
 				?>
             </ul>
             <p id="success" class="<?php echo ($sr && $cf['form_ok']) ? 'visible' : ''; ?>">Thanks for your message! We will get back to you ASAP!</p>
-            <form method="post" action="process.php">
+            <form method="post" action="process.php" id="main-contact-form">
                 <label for="name">Name: <span class="required">*</span></label>
                 <input type="text" id="name" name="name" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['name'] : '' ?>" placeholder="John Doe" required autofocus />
                 
@@ -117,10 +117,11 @@
                 <label for="message">Message: <span class="required">*</span></label>
                 <textarea id="message" name="message" placeholder="Your message must be greater than 20 charcters" required data-minlength="20"><?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['message'] : '' ?></textarea>
                 
-                <span id="loading"></span>
+                
                 <input type="submit" value="Submit" id="submit" />
                 <p id="req-field-desc"><span class="required">*</span> indicates a required field</p>
             </form>
+            <span id="loading"></span>
             <?php unset($_SESSION['cf_returndata']); ?>
 
 
