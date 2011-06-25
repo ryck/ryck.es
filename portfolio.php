@@ -93,7 +93,24 @@
               </ul>
             </aside>
         </article>
-        
+
+        <article class="clearfix">
+          <figure>
+            <a href="http://mdgonzalez.es" title="mdgonzalez"><img src="img/portfolio/mdgonzalez.png" alt="mdgonzalez"></a>
+          </figure>
+            <aside>
+              <h3><a href="http://mdgonzalez.es">Mª Dolores González Lago</a></h3>
+              <h4>Web Developer / Designer</h4>
+              <ul class="skill-set">
+                <li>Design</li>
+                <li>Logo</li>
+                <li>Cardsite</li>
+                <li>i18n</li>
+                <li>jQuery</li>
+              </ul>
+            </aside>
+        </article>
+                
         <article class="clearfix">
           <figure>
             <a href="http://jrey.es" title="J Rey"><img src="img/portfolio/jrey.png" alt="J Rey"></a>
@@ -192,23 +209,6 @@
               </ul>
             </aside>
         </article>           
-
-        <article class="clearfix">
-          <figure>
-            <a href="http://mdgonzalez.es" title="mdgonzalez"><img src="img/portfolio/mdgonzalez.png" alt="mdgonzalez"></a>
-          </figure>
-            <aside>
-              <h3><a href="http://mdgonzalez.es">Mª Dolores González Lago</a></h3>
-              <h4>Web Developer / Designer</h4>
-              <ul class="skill-set">
-                <li>Design</li>
-                <li>Logo</li>
-                <li>Cardsite</li>
-                <li>i18n</li>
-                <li>jQuery</li>
-              </ul>
-            </aside>
-        </article>
         
         <article class="clearfix">
           <figure>
