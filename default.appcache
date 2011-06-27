@@ -12,6 +12,6 @@ js/libs/modernizr-2.0.min.js
 js/libs/respond.min.js
 
 NETWORK:
-#http://example.com/api/
+*
 
 FALLBACK:
