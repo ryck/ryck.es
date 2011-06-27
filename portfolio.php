@@ -170,7 +170,7 @@
             <a href="http://www.luamar.com" title="Luamar"><img src="img/portfolio/luamar.png" alt="Luamar"></a>
           </figure>
             <aside>
-              <h3><a href="http://www.luamar.com">Moblegal</a></h3>
+              <h3><a href="http://www.luamar.com">Luamar</a></h3>
               <h4>Web Developer / Designer</h4>
               <ul class="skill-set">
                 <li>ASP</li>
