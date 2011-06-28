@@ -62,11 +62,11 @@
             </header>
             <hr>
             <div class="group-list">
-              <article id="contact-info">
+              <article id="contact-info" class="vcard">
                   <span class="honorific-prefix">Mr.</span>
-                  <a class="url fn" href="http://ryck.me/">Ricardo Gonzalez</a>
+                  <a class="url fn" rel="me" "href="http://ryck.me/">Ricardo Gonzalez</a>
                   &lt;<a class="email" href="mailto:info@ryck.me">info@ryck.me</a>&gt;
-                  <div class="role">Web Developer / Designer</div>
+                  <div class="title">Web Developer / Designer</div>
                   <div class="nickname">Ryck</div>
                   <div class="bday">1979-10-15</div>
                   <div class="adr">
