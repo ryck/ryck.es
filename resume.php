@@ -63,7 +63,7 @@
             <hr>
             <div class="group-list">
               <article id="contact-info" class="vcard">
-                  <img alt="Ricardo Gonzalez" class="photo hidden" src="img/photo.png" /> 
+                  <img alt="Ricardo Gonzalez" class="photo hidden" src="img/photo.png" />
                   <span class="honorific-prefix">Mr.</span>
                   <a class="url fn" rel="me" "href="http://ryck.me/">Ricardo Gonzalez</a>
                   &lt;<a class="email" href="mailto:info@ryck.me">info@ryck.me</a>&gt;
