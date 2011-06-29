@@ -656,13 +656,14 @@
             <fileset dir="./${dir.publish}/" includes="${page-files}"/>
             <arg value="-jar"/>
             <arg path="./${dir.build}/tools/${tool.htmlcompressor}"/>
+            <arg line="--preserve-php"/>
             <arg line="--type html"/>
             <arg line="--remove-quotes"/>
             <arg line="--compress-js"/>
             <arg line="--compress-css"/>
             <srcfile/>
             <arg value="-o"/>
-            <mapper type="glob" from="*.html" to="../${dir.publish}/*.html"/>
+            <mapper type="glob" from="*.php" to="../${dir.publish}/*.php"/>
             <targetfile/>
         </apply>
     </target>
