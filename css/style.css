@@ -1053,9 +1053,11 @@ input.placeholder-text, textarea.placeholder-text  {
   }
 
   #portfolio section article figure img {
-    -webkit-transition-duration: 0.5s; /*Webkit: Animation duration*/
-    -moz-transition-duration: 0.5s; /*Mozilla duration version*/
-    -o-transition-duration: 0.5s; /*Opera duration version*/
+     -moz-transition: all 0.3s linear;  /* FF4+ */
+       -o-transition: all 0.3s linear;  /* Opera 10.5+ */
+  -webkit-transition: all 0.3s linear;  /* Saf3.2+, Chrome */
+      -ms-transition: all 0.3s linear;  /* IE10? */
+          transition: all 0.3s linear;  
     z-index: 1;
 	}
  
