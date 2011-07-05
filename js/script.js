@@ -1,5 +1,7 @@
 $(function(){
-
+    
+    //preload("#showcase figure img");
+    
     hideUrlBar();
 
     $('textarea').growingTextarea();

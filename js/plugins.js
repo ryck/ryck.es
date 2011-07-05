@@ -14,6 +14,31 @@ function hideUrlBar() {
 	}, 1000);
 }
 
+	/*
+		Image preloader
+		Eg. preload("img");
+		Eg. preload("img.thumb", { delay: 200, transition: 400 });
+	*/
+  
+	function preload(selector, parameters) {
+		var params = {
+			delay: 250,
+			transition: 350,
+			easing: 'linear'
+		};
+		$.extend(params, parameters);
+		
+		$(selector).css({opacity: 0});
+		$(selector).wrap('<span class="preloader" />');
+		$(selector).one("load", function() {
+			$(this).delay(params.delay).animate({opacity: 1}, params.transition, params.easing, function(){
+				$(this).unwrap('<span class="preloader" />');
+			});
+		}).each(function() {
+			if(this.complete) $(this).trigger("load");
+		});
+	}
+
 
 // Fast Buttons
 // http://code.google.com/mobile/articles/fast_buttons.html
