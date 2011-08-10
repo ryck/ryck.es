@@ -850,10 +850,10 @@ input.placeholder-text, textarea.placeholder-text  {
      	
 	}  
   
-  #contact #contact-info, #contact #contact-form {
+  
+  #contact #contact-form {
 
   }
-  
   /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
 }
@@ -991,7 +991,7 @@ input.placeholder-text, textarea.placeholder-text  {
   #resume article#tools {
     clear: left;
   }  
-  #contact-info {
+  #resume #contact-info {
     width: 45%;
     margin: 0;
     float: left;
@@ -1104,7 +1104,12 @@ input.placeholder-text, textarea.placeholder-text  {
   #contact-form #name, #contact-form #email {
     width: 60%;
   }            
-          
+      
+  #contact #contact-info {
+    width: 40%;
+    margin: 1em 0 0 1em;
+    float: left;  
+  }    
 }
 
 
