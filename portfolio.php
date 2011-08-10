@@ -78,10 +78,10 @@
 
          <article class="clearfix">
           <figure>
-            <a href="defaqto.com" title="defaqto"><img src="img/portfolio/defaqto.png" alt="defaqto"></a>
+            <a href="http://defaqto.com" title="defaqto"><img src="img/portfolio/defaqto.png" alt="defaqto"></a>
           </figure>
             <aside>
-              <h3><a href="#">defaqto</a></h3>
+              <h3><a href="http://defaqto.com">defaqto</a></h3>
               <h4>senior PHP developer </h4>
               <ul class="skill-set">
                 <li>Drupal</li>
@@ -116,7 +116,7 @@
             <a href="http://jrey.es" title="J Rey"><img src="img/portfolio/jrey.png" alt="J Rey"></a>
           </figure>
             <aside>
-              <h3><a href="#">J. Rey</a></h3>
+              <h3><a href="http://jrey.es">J. Rey</a></h3>
               <h4>Web Developer / Designer</h4>
               <ul class="skill-set">
                 <li>CodeIgniter</li>

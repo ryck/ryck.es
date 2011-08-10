@@ -493,6 +493,10 @@ ul.menu li span {
     text-shadow: 0 1px 0 #FFFFFF;  
   }
 
+#showcase article figure {
+  background:url(../img/loader.gif) no-repeat center center;
+
+}
 
 
 #contact-form input,
