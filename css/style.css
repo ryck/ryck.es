@@ -612,7 +612,12 @@ input.placeholder-text, textarea.placeholder-text  {
     font-style:italic;
 }
   
-  
+  ul.tabs li:hover em, ul.tabs li a:focus em {
+    text-decoration: underline;
+  }
+  ul.tabs li a {
+    outline: 0;
+  }
   
 /**
  * Non-semantic helper classes: please define your styles before this section.
@@ -848,7 +853,6 @@ input.placeholder-text, textarea.placeholder-text  {
   #contact #contact-info, #contact #contact-form {
 
   }
-
   
   /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
@@ -882,7 +886,7 @@ input.placeholder-text, textarea.placeholder-text  {
     float: right;
     margin-top:2em;
   }
-  ul.tabs li a:hover {
+  ul.tabs li a:hover, ul.tabs li a:focus  {
     background-color: #ededed;
   }
   

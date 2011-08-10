@@ -48,10 +48,10 @@
         
             <nav id="main-menu">    
               <ul class="tabs">
-                <li><a href="home">Home</a></li>
-                <li><a href="resume">Résumé</a></li>
-                <li><a class="active" href="portfolio">Portfolio</a></li>
-                <li><a href="contact">Contact</a></li>
+                <li><a href="home" accesskey="h"><em>H</em>ome</a></li>
+                <li><a href="resume" accesskey="r"><em>R</em>ésumé</a></li>
+                <li><a class="active" href="portfolio" accesskey="p"><em>P</em>ortfolio</a></li>
+                <li><a href="contact" accesskey="c"><em>C</em>ontact</a></li>
               </ul>
             </nav>    
         </div>        
