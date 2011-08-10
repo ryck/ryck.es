@@ -41,9 +41,7 @@
         
         <div id="header" class="clearfix">
             <aside id="header-logo">
-              <figure>
                 <a href="home" title="ryck"><img src="img/logodr-128r.png" alt="ryck" width="64" height="64"></a>
-              </figure>
             </aside>
         
             <nav id="main-menu">    
@@ -65,7 +63,7 @@
               <article id="contact-info" class="vcard">
                   <img alt="Ricardo Gonzalez" class="photo hidden" src="img/photo.png" />
                   <span class="honorific-prefix">Mr.</span>
-                  <a class="url fn" rel="me" "href="http://ryck.me/">Ricardo Gonzalez</a>
+                  <a class="url fn" rel="me" href="http://ryck.me/">Ricardo Gonzalez</a>
                   &lt;<a class="email" href="mailto:info@ryck.me">info@ryck.me</a>&gt;
                   <div class="title">Web Developer / Designer</div>
                   <div class="nickname">Ryck</div>
