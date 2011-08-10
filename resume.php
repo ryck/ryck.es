@@ -49,7 +49,7 @@
                 <li><a href="home" accesskey="h"><em>H</em>ome</a></li>
                 <li><a class="active" href="resume" accesskey="r"><em>R</em>ésumé</a></li>
                 <li><a href="portfolio" accesskey="p"><em>P</em>ortfolio</a></li>
-                <li><a href="contact" accesskey="h"><em>C</em>ontact</a></li>
+                <li><a href="contact" accesskey="c"><em>C</em>ontact</a></li>
               </ul>
             </nav>       
         </div>        
