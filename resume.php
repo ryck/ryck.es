@@ -90,11 +90,13 @@
 
                       <ul class="social-list">
                           <li><a href="http://rick.jinlabs.com"><img src="favicon.png" alt="blog" /><span>blog</span></a></li>
-                          <li><a href="http://twitter.com/ryck"><img src="img/social/twitter_16.png" alt="twitter" /><span>twitter</span></a></li>
+                          <li><a href="http://twitter.com/ryck"><img src="img/social/twitter-2.png" alt="twitter" /><span>twitter</span></a></li>
                           <li><a href="http://www.flickr.com/photos/ryck/"><img src="img/social/flickr_16.png" alt="flickr" /><span>flickr</span></a></li>
                           <li><a href="http://uk.linkedin.com/in/ricardogonzalezcastro"><img src="img/social/linkedin_16.png" alt="linkedin" /><span>linkedin</span></a></li>
                           <li><a href="http://www.last.fm/user/Ryck"><img src="img/social/lastfm_16.png" alt="last.fm" /><span>last.fm</span></a></li>
                           <li><a href="http://www.delicious.com/ryck"><img src="img/social/delicious_16.png" alt="del.icio.us" /><span>delicious</span></a></li>
+                          <li><a href="http://github.com/ryck"><img src="img/social/github.png" alt="GitHub" /><span>GitHub</span></a></li>
+                          <li><a href="http://plus.google.com/113503036174544503434/posts"><img src="img/social/google-plus.png" alt="Google+" /><span>Google+</span></a></li>
                       </ul>
 
               </aside>
