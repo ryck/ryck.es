@@ -380,7 +380,16 @@ a:hover { color: #036; text-decoration: underline; }
 	legend span {
 		font-weight: normal;
 		font-size: 13px;
-		color: #444; }		
+		color: #444; }	
+		
+	input, textarea {
+		
+	   -moz-transition: all 0.3s linear;  /* FF4+ */
+	     -o-transition: all 0.3s linear;  /* Opera 10.5+ */
+	-webkit-transition: all 0.3s linear;  /* Saf3.2+, Chrome */
+	    -ms-transition: all 0.3s linear;  /* IE10? */
+	        transition: all 0.3s linear;  
+	}	
 
 /**
  * Primary styles
