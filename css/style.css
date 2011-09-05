@@ -419,6 +419,9 @@ ol, ul {
 #contact-info .bday {
   display:none;
 }
+.vcard .tel .type {
+display: none;
+}
 a.card {
   background:url("../img/card-address.png") no-repeat scroll left 3px transparent;
   padding:0 0 0 20px;
