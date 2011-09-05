@@ -48,6 +48,8 @@ if( isset($_POST) ){
     if($formok){
         $headers = "From: {$email}" . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        $headers .= "From: $name <$email>". "\r\n";
+        $headers .= "Reply-To: $name <$email>". "\r\n";        
 
         $emailbody = "<p>You have received a new message from the enquiries form on your website.</p>
                       <p><strong>Name: </strong> {$name} </p>
