@@ -631,6 +631,83 @@ input.placeholder-text, textarea.placeholder-text  {
     outline: 0;
   }
   
+  .hellomynameis {
+  font-size: 80%;
+    font-family: Verdana,Arial,Helvetica,sans-serif;    
+    border-radius: 5px;
+    border: 1px solid silver;
+    width: 200px;
+    background: #cf0404; /* Old browsers */
+    background: -moz-linear-gradient(top, #cf0404 0%, #ff3019 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cf0404), color-stop(100%,#ff3019)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #cf0404 0%,#ff3019 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #cf0404 0%,#ff3019 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #cf0404 0%,#ff3019 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf0404', endColorstr='#ff3019',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #cf0404 0%,#ff3019 100%); /* W3C */
+    -moz-background-clip: padding; 
+    -webkit-background-clip: padding-box; 
+    background-clip: padding-box; 
+     -webkit-box-shadow: 0px 0px 4px silver; /* Saf3.0+, Chrome */
+     -moz-box-shadow: 0px 0px 4px silver; /* FF3.5 - 3.6 */
+          box-shadow: 0px 0px 4px silver; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+          
+    -moz-animation:    pulse-shadow 3s infinite alternate;
+        -webkit-animation:    pulse-shadow 3s infinite alternate;
+        -ms-animation:    pulse-shadow 3s infinite alternate;
+    
+    
+
+  }
+  .hello {
+    color: #FFFFFF;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+     padding: 0.2em 0 0;
+  }
+  .mynameis {
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1em;  
+    margin: -0.5em 0 0;
+  }
+  .name {
+  background-color: #FFFFFF;
+    color: #333333;
+    font-size: 3em;
+    text-align: center;
+  }
+  .name p {
+    font-family: 'Over the Rainbow', cursive;
+    margin: 0;
+    padding: .3em 0;
+  -webkit-transform: rotate(-4.5deg);  
+     -moz-transform: rotate(-4.5deg);  
+      -ms-transform: rotate(-4.5deg);  
+       -o-transform: rotate(-4.5deg);  
+          transform: rotate(-4.5deg);  
+  }
+  .card-bottom {
+  height: .7em;
+  
+  }
+  
+  @-webkit-keyframes pulse-shadow {
+			0%   { -webkit-box-shadow: 0px 0px 4px silver; }
+			100%   { -webkit-box-shadow: 0px 0px 16px silver; }
+  }
+  @-moz-keyframes pulse-shadow {
+          0%   { -moz-box-shadow: 0px 0px 4px silver; }
+          100%   { -moz-box-shadow: 0px 0px 16px silver; }
+  }
+  @-ms-keyframes pulse-shadow {
+		0%   { -ms-box-shadow: 0px 0px 4px silver; }
+		100%   { -ms-box-shadow: 0px 0px 16px silver; }
+  }  
+  
 /**
  * Non-semantic helper classes: please define your styles before this section.
  */

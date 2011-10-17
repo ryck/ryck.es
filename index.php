@@ -26,6 +26,9 @@
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+  
+ 	<link href='http://fonts.googleapis.com/css?family=Over+the+Rainbow' rel='stylesheet' type='text/css'>
+  
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <script src="js/libs/modernizr-2.0.min.js"></script>
@@ -57,7 +60,14 @@
         </div>        
     <div id="content">
       <section>
-
+			
+			<div class="hellomynameis">
+			  <div class="hello">Hello</div>
+			  <div class="mynameis">my name is</div>
+			  <div class="name"><p>Rick</p></div>
+			  <div class="card-bottom"></div>
+			</div>
+			
       </section>
     </div>
         
