@@ -184,12 +184,18 @@
             <hr>
             <div class="group-list">
               <article>
-                  <header><h3><a href="http://www.defaqto.com/">Defaqto</a> <span>Oct. 2010 &mdash; currently</span></h3></header>     
+                  <header><h3><a href="http://othermedia.com/">the OTHER media</a> <span>Sep. 2011 &mdash; currently</span></h3></header>     
                   <ul>
-                      <li>Web Developer / Designer</li>
-                      <li>Drupal Expert</li>
+                      <li>Front End Developer</li>
                   </ul>
               </article>
+			<article>
+			    <header><h3><a href="http://www.defaqto.com/">Defaqto</a> <span>Oct. 2010 &mdash; Sep. 2011</span></h3></header>     
+			    <ul>
+			        <li>Web Developer / Designer</li>
+			        <li>Drupal Expert</li>
+			    </ul>
+			</article>              
               <article>
                   <header><h3><a href="http://www.asired.es/">ASIRED</a> <span>Oct. 2008 &mdash; Aug. 2010</span></h3></header>
                   <ul>
