@@ -635,7 +635,6 @@ input.placeholder-text, textarea.placeholder-text  {
   font-size: 80%;
     font-family: Verdana,Arial,Helvetica,sans-serif;    
     border-radius: 5px;
-    border: 1px solid silver;
     width: 200px;
     background: #cf0404; /* Old browsers */
     background: -moz-linear-gradient(top, #cf0404 0%, #ff3019 100%); /* FF3.6+ */
@@ -768,11 +767,11 @@ input.placeholder-text, textarea.placeholder-text  {
   
   #header-logo img {
 
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
 
   
   }
