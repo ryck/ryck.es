@@ -22,16 +22,14 @@ $(function(){
 	// media query change
 	function WidthChange(mq) {
 		if (mq.matches) {
-			console.log('yeah!');
+			//console.log('yeah!');
 			$('header.main').each(function () {
 			    $(this).siblings('.group-list').slideUp('fast');
 			    $(this).siblings('hr').hide();
 			});	
-			
-			
 		}
 		else {
-			console.log('nope!');
+			//console.log('nope!');
 			$('header.main').each(function () {
 			    $(this).siblings('.group-list').slideDown('fast');
 			    $(this).siblings('hr').show();
