@@ -11,6 +11,38 @@ $(function(){
         $(this).siblings('hr').toggle();
     });
 
+
+
+	// media query event handler
+	if (matchMedia) {
+		var mq = window.matchMedia("(max-width: 675px)");
+		mq.addListener(WidthChange);
+		WidthChange(mq);
+	}
+	// media query change
+	function WidthChange(mq) {
+		if (mq.matches) {
+			console.log('yeah!');
+			$('header.main').each(function () {
+			    $(this).siblings('.group-list').slideUp('fast');
+			    $(this).siblings('hr').hide();
+			});	
+			
+			
+		}
+		else {
+			console.log('nope!');
+			$('header.main').each(function () {
+			    $(this).siblings('.group-list').slideDown('fast');
+			    $(this).siblings('hr').show();
+			});	
+		}
+	}
+
+
+
+
+
 /*
     window.addEventListener('load', function() {
       window.setTimeout(function() {

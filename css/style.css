@@ -865,25 +865,25 @@ input.placeholder-text, textarea.placeholder-text  {
     background-repeat: no-repeat;
   }
   #resume section#personal header.main {
-    background-image: url(../img/id-card.png);
+    background-image: url(../img/123-id-card.png);
   }
   #resume section#skills header.main {
-    background-image: url(../img/gear.png);
+    background-image: url(../img/19-gear.png);
   }    
   #resume section#experience header.main {
-    background-image: url(../img/suitcase.png);
+    background-image: url(../img/37-suitcase.png);
   }
   #resume section#education header.main {
-    background-image: url(../img/gradhat.png);
+    background-image: url(../img/140-gradhat.png);
   }
   #resume section#languages header.main {
-    background-image: url(../img/chat-2.png);
+    background-image: url(../img/09-chat-2.png);
   }
   #resume section#hobbies header.main {
-    background-image: url(../img/controller.png);
+    background-image: url(../img/116-controller.png);
   }
   #resume section#references header.main {
-    background-image: url(../img/heart.png);
+    background-image: url(../img/29-heart.png);
   }
   #resume section hr {
   background: url("../img/hr2.png") repeat-x scroll center center transparent;
@@ -1246,6 +1246,49 @@ input.placeholder-text, textarea.placeholder-text  {
 
   
 }
+
+/* iPhone 4 (and other HPD devides) */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+
+
+	#resume section#personal header.main {
+	  background-image: url(../img/123-id-card@2x.png);
+	  background-size: 24px 17px;
+	}
+	#resume section#skills header.main {
+	  background-image: url(../img/19-gear@2x.png);
+	  background-size: 26px 26px;
+	}    
+	#resume section#experience header.main {
+	  background-image: url(../img/37-suitcase@2x.png);
+	  background-size: 26px 22px;
+	}
+	#resume section#education header.main {
+	  background-image: url(../img/140-gradhat@2x.png);
+	  background-size: 30px 23px;
+	}
+	#resume section#languages header.main {
+	  background-image: url(../img/09-chat-2@2x.png);
+	  background-size: 24px 22px;
+	}
+	#resume section#hobbies header.main {
+	  background-image: url(../img/116-controller@2x.png);
+	  background-size: 30px 20px;
+	}
+	#resume section#references header.main {
+	  background-image: url(../img/29-heart@2x.png);
+	  background-size: 24px 21px;
+	}
+
+
+}
+
+
+
+
 
 @media only screen and (min-width: 1024px) {
   #wrapper-content {
