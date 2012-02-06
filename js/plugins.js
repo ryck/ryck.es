@@ -149,6 +149,15 @@ function iosStrtSrn() {
 })( jQuery );
 
 
+
+var addToHomeConfig = {
+	lifespan:10000,
+	expire:5,
+	touchIcon:false,
+	returningVisitor: true
+};
+
+
 /*!
  * Add to Homescreen v2.0 ~ Copyright (c) 2012 Matteo Spinelli, http://cubiq.org
  * Released under MIT license, http://cubiq.org/license

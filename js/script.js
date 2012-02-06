@@ -40,15 +40,6 @@ $(function(){
 	}
 
 
-var addToHomeConfig = {
-	animationIn: 'bubble',
-	animationOut: 'drop',
-	lifespan:10000,
-	expire:2,
-	touchIcon:true,
-	returningVisitor: true
-};
-
 /*
     window.addEventListener('load', function() {
       window.setTimeout(function() {
