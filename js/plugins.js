@@ -149,615 +149,341 @@ function iosStrtSrn() {
 })( jQuery );
 
 
-/*
-  Copyright 2010 Google Inc.
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-*/
-
-/**
- * @fileoverview Bookmark bubble library. This is meant to be included in the
- * main JavaScript binary of a mobile web application.
- *
- * Supported browsers: iPhone / iPod / iPad Safari 3.0+
+/*!
+ * Add to Homescreen v2.0 ~ Copyright (c) 2012 Matteo Spinelli, http://cubiq.org
+ * Released under MIT license, http://cubiq.org/license
  */
-
-var google = google || {};
-google.bookmarkbubble = google.bookmarkbubble || {};
-
-
-/**
- * Binds a context object to the function.
- * @param {Function} fn The function to bind to.
- * @param {Object} context The "this" object to use when the function is run.
- * @return {Function} A partially-applied form of fn.
- */
-google.bind = function(fn, context) {
-  return function() {
-    return fn.apply(context, arguments);
-  };
-};
-
-
-/**
- * Function used to define an abstract method in a base class. If a subclass
- * fails to override the abstract method, then an error will be thrown whenever
- * that method is invoked.
- */
-google.abstractMethod = function() {
-  throw Error('Unimplemented abstract method.');
-};
-
-
-
-/**
- * The bubble constructor. Instantiating an object does not cause anything to
- * be rendered yet, so if necessary you can set instance properties before
- * showing the bubble.
- * @constructor
- */
-google.bookmarkbubble.Bubble = function() {
-  /**
-   * Handler for the scroll event. Keep a reference to it here, so it can be
-   * unregistered when the bubble is destroyed.
-   * @type {function()}
-   * @private
-   */
-  this.boundScrollHandler_ = google.bind(this.setPosition, this);
-
-  /**
-   * The bubble element.
-   * @type {Element}
-   * @private
-   */
-  this.element_ = null;
-
-  /**
-   * Whether the bubble has been destroyed.
-   * @type {boolean}
-   * @private
-   */
-  this.hasBeenDestroyed_ = false;
-};
-
-
-/**
- * Shows the bubble if allowed. It is not allowed if:
- * - The browser is not Mobile Safari, or
- * - The user has dismissed it too often already, or
- * - The hash parameter is present in the location hash, or
- * - The application is in fullscreen mode, which means it was already loaded
- *   from a homescreen bookmark.
- * @return {boolean} True if the bubble is being shown, false if it is not
- *     allowed to show for one of the aforementioned reasons.
- */
-google.bookmarkbubble.Bubble.prototype.showIfAllowed = function() {
-  if (!this.isAllowedToShow_()) {
-    return false;
-  }
-
-  this.show_();
-  return true;
-};
-
-
-/**
- * Shows the bubble if allowed after loading the icon image. This method creates
- * an image element to load the image into the browser's cache before showing
- * the bubble to ensure that the image isn't blank. Use this instead of
- * showIfAllowed if the image url is http and cacheable.
- * This hack is necessary because Mobile Safari does not properly render
- * image elements with border-radius CSS.
- * @param {function()} opt_callback Closure to be called if and when the bubble
- *        actually shows.
- * @return {boolean} True if the bubble is allowed to show.
- */
-google.bookmarkbubble.Bubble.prototype.showIfAllowedWhenLoaded =
-    function(opt_callback) {
-  if (!this.isAllowedToShow_()) {
-    return false;
-  }
-
-  var self = this;
-  // Attach to self to avoid garbage collection.
-  var img = self.loadImg_ = document.createElement('img');
-  img.src = self.getIconUrl_();
-  img.onload = function() {
-    if (img.complete) {
-      delete self.loadImg_;
-      img.onload = null;  // Break the circular reference.
-
-      self.show_();
-      opt_callback && opt_callback();
-    }
-  };
-  img.onload();
-
-  return true;
-};
-
-
-/**
- * Sets the parameter in the location hash. As it is
- * unpredictable what hash scheme is to be used, this method must be
- * implemented by the host application.
- *
- * This gets called automatically when the bubble is shown. The idea is that if
- * the user then creates a bookmark, we can later recognize on application
- * startup whether it was from a bookmark suggested with this bubble.
- *
- * NOTE: Using a hash parameter to track whether the bubble has been shown
- * conflicts with the navigation system in jQuery Mobile. If you are using that
- * library, you should implement this function to track the bubble's status in
- * a different way, e.g. using window.localStorage in HTML5.
- */
-google.bookmarkbubble.Bubble.prototype.setHashParameter = google.abstractMethod;
-
-
-/**
- * Whether the parameter is present in the location hash. As it is
- * unpredictable what hash scheme is to be used, this method must be
- * implemented by the host application.
- *
- * Call this method during application startup if you want to log whether the
- * application was loaded from a bookmark with the bookmark bubble promotion
- * parameter in it.
- *
- * @return {boolean} Whether the bookmark bubble parameter is present in the
- *     location hash.
- */
-google.bookmarkbubble.Bubble.prototype.hasHashParameter = google.abstractMethod;
-
-
-/**
- * The number of times the user must dismiss the bubble before we stop showing
- * it. This is a public property and can be changed by the host application if
- * necessary.
- * @type {number}
- */
-google.bookmarkbubble.Bubble.prototype.NUMBER_OF_TIMES_TO_DISMISS = 2;
-
-
-/**
- * Time in milliseconds. If the user does not dismiss the bubble, it will auto
- * destruct after this amount of time.
- * @type {number}
- */
-google.bookmarkbubble.Bubble.prototype.TIME_UNTIL_AUTO_DESTRUCT = 15000;
-
-
-/**
- * The prefix for keys in local storage. This is a public property and can be
- * changed by the host application if necessary.
- * @type {string}
- */
-google.bookmarkbubble.Bubble.prototype.LOCAL_STORAGE_PREFIX = 'BOOKMARK_';
-
-
-/**
- * The key name for the dismissed state.
- * @type {string}
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.DISMISSED_ = 'DISMISSED_COUNT';
-
-
-/**
- * The arrow image in base64 data url format.
- * @type {string}
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.IMAGE_ARROW_DATA_URL_ = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAATCAMAAABSrFY3AAABKVBMVEUAAAD///8AAAAAAAAAAAAAAAAAAADf398AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD09PQAAAAAAAAAAAC9vb0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD19fUAAAAAAAAAAAAAAADq6uoAAAAAAAAAAAC8vLzU1NTT09MAAADg4OAAAADs7OwAAAAAAAAAAAD///+cueenwerA0vC1y+3a5fb5+/3t8vr4+v3w9PuwyOy3zO3h6vfh6vjq8Pqkv+mat+fE1fHB0/Cduuifu+iuxuuivemrxOvC1PDz9vzJ2fKpwuqmwOrb5vapw+q/0vDf6ffK2vLN3PPprJISAAAAQHRSTlMAAAEGExES7FM+JhUoQSxIRwMbNfkJUgXXBE4kDQIMHSA0Tw4xIToeTSc4Chz4OyIjPfI3QD/X5OZR6zzwLSUPrm1y3gAAAQZJREFUeF5lzsVyw0AURNE3IMsgmZmZgszQZoeZOf//EYlG5Yrhbs+im4Dj7slM5wBJ4OJ+undAUr68gK/Hyb6Bcp5yBR/w8jreNeAr5Eg2XE7g6e2/0z6cGw1JQhpmHP3u5aiPPnTTkIK48Hj9Op7bD3btAXTfgUdwYjwSDCVXMbizO0O4uDY/x4kYC5SWFnfC6N1a9RCO7i2XEmQJj2mHK1Hgp9Vq3QBRl9shuBLGhcNtHexcdQCnDUoUGetxDD+H2DQNG2xh6uAWgG2/17o1EmLqYH0Xej0UjHAaFxZIV6rJ/WK1kg7QZH8HU02zmdJinKZJaDV3TVMjM5Q9yiqYpUwiMwa/1apDXTNESjsAAAAASUVORK5CYII=';
-
-
-/**
- * The close image in base64 data url format.
- * @type {string}
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.IMAGE_CLOSE_DATA_URL_ = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAALVBMVEXM3fm+1Pfb5/rF2fjw9f23z/aavPOhwfTp8PyTt/L3+v7T4vqMs/K7zP////+qRWzhAAAAXElEQVQIW2O4CwUM996BwVskxtOqd++2rwMyPI+ve31GD8h4Madqz2mwms5jZ/aBGS/mHIDoen3m+DowY8/hOVUgxusz+zqPg7SvPA1UxQfSvu/du0YUK2AMmDMA5H1qhVX33T8AAAAASUVORK5CYII=';
-
-
-/**
- * The link used to locate the application's home screen icon to display inside
- * the bubble. The default link used here is for an iPhone home screen icon
- * without gloss. If your application uses a glossy icon, change this to
- * 'apple-touch-icon'.
- * @type {string}
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.REL_ICON_ =
-    'apple-touch-icon-precomposed';
-
-
-/**
- * Regular expression for detecting an iPhone or iPod or iPad.
- * @type {!RegExp}
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.MOBILE_SAFARI_USERAGENT_REGEX_ =
-    /iPhone|iPod|iPad/;
-
-
-/**
- * Regular expression for detecting an iPad.
- * @type {!RegExp}
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.IPAD_USERAGENT_REGEX_ = /iPad/;
-
-
-/**
- * Regular expression for extracting the iOS version. Only matches 2.0 and up.
- * @type {!RegExp}
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.IOS_VERSION_USERAGENT_REGEX_ =
-    /OS (\d)_(\d)(?:_(\d))?/;
-
-
-/**
- * Determines whether the bubble should be shown or not.
- * @return {boolean} Whether the bubble should be shown or not.
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.isAllowedToShow_ = function() {
-  return this.isMobileSafari_() &&
-      !this.hasBeenDismissedTooManyTimes_() &&
-      !this.isFullscreen_() &&
-      !this.hasHashParameter();
-};
-
-
-/**
- * Builds and shows the bubble.
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.show_ = function() {
-  this.element_ = this.build_();
-
-  document.body.appendChild(this.element_);
-  this.element_.style.WebkitTransform =
-      'translate3d(0,' + this.getHiddenYPosition_() + 'px,0)';
-
-  this.setHashParameter();
-
-  window.setTimeout(this.boundScrollHandler_, 1);
-  window.addEventListener('scroll', this.boundScrollHandler_, false);
-
-  // If the user does not dismiss the bubble, slide out and destroy it after
-  // some time.
-  window.setTimeout(google.bind(this.autoDestruct_, this),
-      this.TIME_UNTIL_AUTO_DESTRUCT);
-};
-
-
-/**
- * Destroys the bubble by removing its DOM nodes from the document.
- */
-google.bookmarkbubble.Bubble.prototype.destroy = function() {
-  if (this.hasBeenDestroyed_) {
-    return;
-  }
-  window.removeEventListener('scroll', this.boundScrollHandler_, false);
-  if (this.element_ && this.element_.parentNode == document.body) {
-    document.body.removeChild(this.element_);
-    this.element_ = null;
-  }
-  this.hasBeenDestroyed_ = true;
-};
-
-
-/**
- * Remember that the user has dismissed the bubble once more.
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.rememberDismissal_ = function() {
-  if (window.localStorage) {
-    try {
-      var key = this.LOCAL_STORAGE_PREFIX + this.DISMISSED_;
-      var value = Number(window.localStorage[key]) || 0;
-      window.localStorage[key] = String(value + 1);
-    } catch (ex) {
-      // Looks like we've hit the storage size limit. Currently we have no
-      // fallback for this scenario, but we could use cookie storage instead.
-      // This would increase the code bloat though.
-    }
-  }
-};
-
-
-/**
- * Whether the user has dismissed the bubble often enough that we will not
- * show it again.
- * @return {boolean} Whether the user has dismissed the bubble often enough
- *     that we will not show it again.
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.hasBeenDismissedTooManyTimes_ =
-    function() {
-  if (!window.localStorage) {
-    // If we can not use localStorage to remember how many times the user has
-    // dismissed the bubble, assume he has dismissed it. Otherwise we might end
-    // up showing it every time the host application loads, into eternity.
-    return true;
-  }
-  try {
-    var key = this.LOCAL_STORAGE_PREFIX + this.DISMISSED_;
-
-    // If the key has never been set, localStorage yields undefined, which
-    // Number() turns into NaN. In that case we'll fall back to zero for
-    // clarity's sake.
-    var value = Number(window.localStorage[key]) || 0;
-
-    return value >= this.NUMBER_OF_TIMES_TO_DISMISS;
-  } catch (ex) {
-    // If we got here, something is wrong with the localStorage. Make the same
-    // assumption as when it does not exist at all. Exceptions should only
-    // occur when setting a value (due to storage limitations) but let's be
-    // extra careful.
-    return true;
-  }
-};
-
-
-/**
- * Whether the application is running in fullscreen mode.
- * @return {boolean} Whether the application is running in fullscreen mode.
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.isFullscreen_ = function() {
-  return !!window.navigator.standalone;
-};
-
-
-/**
- * Whether the application is running inside Mobile Safari.
- * @return {boolean} True if the current user agent looks like Mobile Safari.
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.isMobileSafari_ = function() {
-  return this.MOBILE_SAFARI_USERAGENT_REGEX_.test(window.navigator.userAgent);
-};
-
-
-/**
- * Whether the application is running on an iPad.
- * @return {boolean} True if the current user agent looks like an iPad.
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.isIpad_ = function() {
-  return this.IPAD_USERAGENT_REGEX_.test(window.navigator.userAgent);
-};
-
-
-/**
- * Creates a version number from 4 integer pieces between 0 and 127 (inclusive).
- * @param {*=} opt_a The major version.
- * @param {*=} opt_b The minor version.
- * @param {*=} opt_c The revision number.
- * @param {*=} opt_d The build number.
- * @return {number} A representation of the version.
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.getVersion_ = function(opt_a, opt_b,
-    opt_c, opt_d) {
-  // We want to allow implicit conversion of any type to number while avoiding
-  // compiler warnings about the type.
-  return /** @type {number} */ (opt_a) << 21 |
-      /** @type {number} */ (opt_b) << 14 |
-      /** @type {number} */ (opt_c) << 7 |
-      /** @type {number} */ (opt_d);
-};
-
-
-/**
- * Gets the iOS version of the device. Only works for 2.0+.
- * @return {number} The iOS version.
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.getIosVersion_ = function() {
-  var groups = this.IOS_VERSION_USERAGENT_REGEX_.exec(
-      window.navigator.userAgent) || [];
-  groups.shift();
-  return this.getVersion_.apply(this, groups);
-};
-
-
-/**
- * Positions the bubble at the bottom of the viewport using an animated
- * transition.
- */
-google.bookmarkbubble.Bubble.prototype.setPosition = function() {
-  this.element_.style.WebkitTransition = '-webkit-transform 0.7s ease-out';
-  this.element_.style.WebkitTransform =
-      'translate3d(0,' + this.getVisibleYPosition_() + 'px,0)';
-};
-
-
-/**
- * Destroys the bubble by removing its DOM nodes from the document, and
- * remembers that it was dismissed.
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.closeClickHandler_ = function() {
-  this.destroy();
-  this.rememberDismissal_();
-};
-
-
-/**
- * Gets called after a while if the user ignores the bubble.
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.autoDestruct_ = function() {
-  if (this.hasBeenDestroyed_) {
-    return;
-  }
-  this.element_.style.WebkitTransition = '-webkit-transform 0.7s ease-in';
-  this.element_.style.WebkitTransform =
-      'translate3d(0,' + this.getHiddenYPosition_() + 'px,0)';
-  window.setTimeout(google.bind(this.destroy, this), 700);
-};
-
-
-/**
- * Gets the y offset used to show the bubble (i.e., position it on-screen).
- * @return {number} The y offset.
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.getVisibleYPosition_ = function() {
-  return this.isIpad_() ? window.pageYOffset + 17 :
-      window.pageYOffset - this.element_.offsetHeight + window.innerHeight - 17;
-};
-
-
-/**
- * Gets the y offset used to hide the bubble (i.e., position it off-screen).
- * @return {number} The y offset.
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.getHiddenYPosition_ = function() {
-  return this.isIpad_() ? window.pageYOffset - this.element_.offsetHeight :
-      window.pageYOffset + window.innerHeight;
-};
-
-
-/**
- * The url of the app's bookmark icon.
- * @type {string|undefined}
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.iconUrl_;
-
-
-/**
- * Scrapes the document for a link element that specifies an Apple favicon and
- * returns the icon url. Returns an empty data url if nothing can be found.
- * @return {string} A url string.
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.getIconUrl_ = function() {
-  if (!this.iconUrl_) {
-    var link = this.getLink(this.REL_ICON_);
-    if (!link || !(this.iconUrl_ = link.href)) {
-      this.iconUrl_ = 'data:image/png;base64,';
-    }
-  }
-  return this.iconUrl_;
-};
-
-
-/**
- * Gets the requested link tag if it exists.
- * @param {string} rel The rel attribute of the link tag to get.
- * @return {Element} The requested link tag or null.
- */
-google.bookmarkbubble.Bubble.prototype.getLink = function(rel) {
-  rel = rel.toLowerCase();
-  var links = document.getElementsByTagName('link');
-  for (var i = 0; i < links.length; ++i) {
-    var currLink = /** @type {Element} */ (links[i]);
-    if (currLink.getAttribute('rel').toLowerCase() == rel) {
-      return currLink;
-    }
-  }
-  return null;
-};
-
-
-/**
- * Creates the bubble and appends it to the document.
- * @return {Element} The bubble element.
- * @private
- */
-google.bookmarkbubble.Bubble.prototype.build_ = function() {
-  var bubble = document.createElement('div');
-  var isIpad = this.isIpad_();
-
-  bubble.style.position = 'absolute';
-  bubble.style.zIndex = 1000;
-  bubble.style.width = '100%';
-  bubble.style.left = '0';
-  bubble.style.top = '0';
-
-  var bubbleInner = document.createElement('div');
-  bubbleInner.style.position = 'relative';
-  bubbleInner.style.width = '214px';
-  bubbleInner.style.margin = isIpad ? '0 0 0 82px' : '0 auto';
-  bubbleInner.style.border = '2px solid #fff';
-  bubbleInner.style.padding = '20px 20px 20px 10px';
-  bubbleInner.style.WebkitBorderRadius = '8px';
-  bubbleInner.style.WebkitBoxShadow = '0 0 8px rgba(0, 0, 0, 0.7)';
-  bubbleInner.style.WebkitBackgroundSize = '100% 8px';
-  bubbleInner.style.backgroundColor = '#b0c8ec';
-  bubbleInner.style.background = '#cddcf3 -webkit-gradient(linear, ' +
-      'left bottom, left top, ' + isIpad ?
-          'from(#cddcf3), to(#b3caed)) no-repeat top' :
-          'from(#b3caed), to(#cddcf3)) no-repeat bottom';
-  bubbleInner.style.font = '13px/17px sans-serif';
-  bubble.appendChild(bubbleInner);
-
-  // The "Add to Home Screen" text is intended to be the exact same text
-  // that is displayed in the menu of Mobile Safari.
-  if (this.getIosVersion_() >= this.getVersion_(4, 2)) {
-    bubbleInner.innerHTML = 'Bookmark this web on your phone: ' +
-        'tap on the arrow and then <b>\'Add to Home Screen\'</b>';
-  } else {
-    bubbleInner.innerHTML = 'Bookmark this web on your phone: ' +
-        'tap <b style="font-size:15px">+</b> and then ' +
-        '<b>\'Add to Home Screen\'</b>';
-  }
-
-  var icon = document.createElement('div');
-  icon.style['float'] = 'left';
-  icon.style.width = '55px';
-  icon.style.height = '55px';
-  icon.style.margin = '-2px 7px 3px 5px';
-  icon.style.background =
-      '#fff url(' + this.getIconUrl_() + ') no-repeat -1px -1px';
-  icon.style.WebkitBackgroundSize = '57px';
-  icon.style.WebkitBorderRadius = '10px';
-  icon.style.WebkitBoxShadow = '0 2px 5px rgba(0, 0, 0, 0.4)';
-  bubbleInner.insertBefore(icon, bubbleInner.firstChild);
-
-  var arrow = document.createElement('div');
-  arrow.style.backgroundImage = 'url(' + this.IMAGE_ARROW_DATA_URL_ + ')';
-  arrow.style.width = '25px';
-  arrow.style.height = '19px';
-  arrow.style.position = 'absolute';
-  arrow.style.left = '111px';
-  if (isIpad) {
-    arrow.style.WebkitTransform = 'rotate(180deg)';
-    arrow.style.top = '-19px';
-  } else {
-    arrow.style.bottom = '-19px';
-  }
-  bubbleInner.appendChild(arrow);
-
-  var close = document.createElement('a');
-  close.onclick = google.bind(this.closeClickHandler_, this);
-  close.style.position = 'absolute';
-  close.style.display = 'block';
-  close.style.top = '-3px';
-  close.style.right = '-3px';
-  close.style.width = '16px';
-  close.style.height = '16px';
-  close.style.border = '10px solid transparent';
-  close.style.background =
-      'url(' + this.IMAGE_CLOSE_DATA_URL_ + ') no-repeat';
-  bubbleInner.appendChild(close);
-
-  return bubble;
-};
-
+var addToHome = (function (w) {
+	var nav = w.navigator,
+		isIDevice = 'platform' in nav && (/iphone|ipod|ipad/gi).test(nav.platform),
+		isIPad,
+		isRetina,
+		isSafari,
+		isStandalone,
+		OSVersion,
+		startX = 0,
+		startY = 0,
+		isExpired,
+		isSessionActive,
+		isReturningVisitor,
+		balloon,
+		overrideChecks,
+
+		positionInterval,
+		closeTimeout,
+
+		options = {
+			autostart: true,			// Automatically open the balloon
+			returningVisitor: false,	// Show the balloon to returning visitors only (setting this to true is HIGHLY RECCOMENDED)
+			animationIn: 'drop',		// drop || bubble || fade
+			animationOut: 'fade',		// drop || bubble || fade
+			startDelay: 2000,			// 2 seconds from page load before the balloon appears
+			lifespan: 15000,			// 15 seconds before it is automatically destroyed
+			bottomOffset: 14,			// Distance of the balloon from bottom
+			expire: 0,					// Minutes to wait before showing the popup again (0 = always displayed)
+			message: '',				// Customize your message or force a language ('' = automatic)
+			touchIcon: false,			// Display the touch icon
+			arrow: true,				// Display the balloon arrow
+			hookOnLoad: true,			// Should we hook to onload event? (really advanced usage)
+			iterations: 100				// Internal/debug use
+		},
+
+		intl = {
+			ca_es: 'Per instal·lar aquesta aplicació al vostre %device premeu %icon i llavors <strong>Afegir a pantalla d\'inici</strong>.',
+			da_dk: 'Tilføj denne side til din %device: tryk på %icon og derefter <strong>Tilføj til hjemmeskærm</strong>.',
+			de_de: 'Installieren Sie diese App auf Ihrem %device: %icon antippen und dann <strong>Zum Home-Bildschirm</strong>.',
+			el_gr: 'Εγκαταστήσετε αυτήν την Εφαρμογή στήν συσκευή σας %device: %icon μετά πατάτε <strong>Προσθήκη σε Αφετηρία</strong>.',
+			en_us: 'Install this web app on your %device: tap %icon and then <strong>Add to Home Screen</strong>.',
+			es_es: 'Para instalar esta app en su %device, pulse %icon y seleccione <strong>Añadir a pantalla de inicio</strong>.',
+			fi_fi: 'Asenna tämä web-sovellus laitteeseesi %device: paina %icon ja sen jälkeen valitse <strong>Lisää Koti-valikkoon</strong>.',
+			fr_fr: 'Ajoutez cette application sur votre %device en cliquant sur %icon, puis <strong>Ajouter à l\'écran d\'accueil</strong>.',
+			he_il: '<span dir="rtl">התקן אפליקציה זו על ה-%device שלך: הקש %icon ואז <strong>הוסף למסך הבית</strong>.</span>',
+			hu_hu: 'Telepítse ezt a web-alkalmazást az Ön %device-jára: nyomjon a %icon-ra majd a <strong>Főképernyőhöz adás</strong> gombra.',
+			it_it: 'Installa questa applicazione sul tuo %device: premi su %icon e poi <strong>Aggiungi a Home</strong>.',
+			ja_jp: 'このウェブアプリをあなたの%deviceにインストールするには%iconをタップして<strong>ホーム画面に追加</strong>を選んでください。',
+			ko_kr: '%device에 웹앱을 설치하려면 %icon을 터치 후 "홈화면에 추가"를 선택하세요',
+			nb_no: 'Installer denne appen på din %device: trykk på %icon og deretter <strong>Legg til på Hjem-skjerm</strong>',
+			nl_nl: 'Installeer deze webapp op uw %device: tik %icon en dan <strong>Zet in beginscherm</strong>.',
+			pl_pl: 'Aby zainstalować tę aplikacje na %device: naciśnij %icon a następnie <strong>Dodaj jako ikonę</strong>.',
+			pt_br: 'Instale este web app em seu %device: aperte %icon e selecione <strong>Adicionar à Tela Inicio</strong>.',
+			pt_pt: 'Para instalar esta aplicação no seu %device, prima o %icon e depois o <strong>Adicionar ao ecrã principal</strong>.',
+			ru_ru: 'Установите это веб-приложение на ваш %device: нажмите %icon, затем <strong>Добавить в «Домой»</strong>.',
+			sv_se: 'Lägg till denna webbapplikation på din %device: tryck på %icon och därefter <strong>Lägg till på hemskärmen</strong>.',
+			th_th: 'ติดตั้งเว็บแอพฯ นี้บน %device ของคุณ: แตะ %icon และ <strong>เพิ่มที่หน้าจอโฮม</strong>',
+			tr_tr: '%device için bu uygulamayı kurduktan sonra %icon simgesine dokunarak <strong>Ev Ekranına Ekle</strong>yin.',
+			zh_cn: '您可以将此应用程式安装到您的 %device 上。请按 %icon 然后点选<strong>添加至主屏幕</strong>。',
+			zh_tw: '您可以將此應用程式安裝到您的 %device 上。請按 %icon 然後點選<strong>加入主畫面螢幕</strong>。'
+		};
+
+	function init () {
+		// Preliminary check, prevents all further checks to be performed on iDevices only
+		if ( !isIDevice ) return;
+
+		var now = Date.now(),
+			i;
+
+		// Merge local with global options
+		if (w.addToHomeConfig) {
+			for ( i in w.addToHomeConfig ) {
+				options[i] = w.addToHomeConfig[i];
+			}
+		}
+		if ( !options.autostart ) options.hookOnLoad = false;
+
+		isIPad = (/ipad/gi).test(nav.platform);
+		isRetina = w.devicePixelRatio && w.devicePixelRatio > 1;
+		isSafari = nav.appVersion.match(/Safari/gi);
+		isStandalone = nav.standalone;
+		
+		OSVersion = nav.appVersion.match(/OS (\d+_\d+)/i);
+		OSVersion = OSVersion[1] ? +OSVersion[1].replace('_', '.') : 0;
+		
+		isExpired = +w.localStorage.getItem('addToHome') || now;
+		isSessionActive = w.sessionStorage.getItem('addToHomeSession');
+		isReturningVisitor = !options.returningVisitor || ( isExpired && isExpired + 28*24*60*60*1000 > now );			// You are considered a "returning visitor" if you access the site more than once/month
+
+		// If it is expired we need to reissue a new balloon
+		isExpired = ( !options.expire || isExpired <= now );
+
+		if ( options.hookOnLoad ) w.addEventListener('load', loaded, false);
+		else if ( !options.hookOnLoad && options.autostart ) loaded();
+	}
+
+	function loaded () {
+		w.removeEventListener('load', loaded, false);
+
+		if ( !overrideChecks && (!isSafari || !isExpired || isSessionActive || isStandalone || !isReturningVisitor) ) return;
+
+		if ( options.expire || options.returningVisitor ) {
+			w.localStorage.setItem('addToHome', Date.now() + options.expire * 60000);
+		}
+
+		var icons = options.touchIcon ? document.querySelectorAll('head link[rel=apple-touch-icon],head link[rel=apple-touch-icon-precomposed]') : [],
+			sizes,
+			touchIcon = '',
+			closeButton,
+			platform = nav.platform.split(' ')[0],
+			language = nav.language.replace('-', '_'),
+			i, l;
+
+		balloon = document.createElement('div');
+		balloon.id = 'addToHomeScreen';
+		balloon.style.cssText += 'left:-9999px;-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-duration:0;-webkit-transform:translate3d(0,0,0);position:' + (OSVersion < 5 ? 'absolute' : 'fixed');
+
+		// Localize message
+		if ( options.message in intl ) {		// You may force a language despite the user's locale
+			language = options.message;
+			options.message = '';
+		}
+		if ( options.message === '' ) {			// We look for a suitable language (defaulted to en_us)
+			options.message = language in intl ? intl[language] : intl['en_us'];
+		}
+
+		// Search for the apple-touch-icon
+		if ( icons.length ) {
+			for ( i = 0, l = icons.length; i < l; i++ ) {
+				sizes = icons[i].getAttribute('sizes');
+
+				if ( sizes ) {
+					if ( isRetina && sizes == '114x114' ) {
+						touchIcon = icons[i].href;
+						break;
+					}
+				} else {
+					touchIcon = icons[i].href;
+				}
+			}
+
+			touchIcon = '<span style="background-image:url(' + touchIcon + ')" class="addToHomeTouchIcon"></span>';
+		}
+
+		balloon.className = (isIPad ? 'addToHomeIpad' : 'addToHomeIphone') + (touchIcon ? ' addToHomeWide' : '');
+		balloon.innerHTML = touchIcon +
+			options.message.replace('%device', platform).replace('%icon', OSVersion >= 4.2 ? '<span class="addToHomeShare"></span>' : '<span class="addToHomePlus">+</span>') +
+			(options.arrow ? '<span class="addToHomeArrow"></span>' : '') +
+			'<span class="addToHomeClose">\u00D7</span>';
+
+		document.body.appendChild(balloon);
+
+		// Add the close action
+		closeButton = balloon.querySelector('.addToHomeClose');
+		if ( closeButton ) closeButton.addEventListener('click', clicked, false);
+
+		setTimeout(show, options.startDelay);
+	}
+
+	function show () {
+		var duration,
+			iPadXShift = 160;
+
+		// Set the initial position
+		if ( isIPad ) {
+			if ( OSVersion < 5 ) {
+				startY = w.scrollY;
+				startX = w.scrollX;
+				iPadXShift = 208;
+			}
+
+			balloon.style.top = startY + options.bottomOffset + 'px';
+			balloon.style.left = startX + iPadXShift - Math.round(balloon.offsetWidth / 2) + 'px';
+
+			switch ( options.animationIn ) {
+				case 'drop':
+					duration = '0.6s';
+					balloon.style.webkitTransform = 'translate3d(0,' + -(w.scrollY + options.bottomOffset + balloon.offsetHeight) + 'px,0)';
+					break;
+				case 'bubble':
+					duration = '0.6s';
+					balloon.style.opacity = '0';
+					balloon.style.webkitTransform = 'translate3d(0,' + (startY + 50) + 'px,0)';
+					break;
+				default:
+					duration = '1s';
+					balloon.style.opacity = '0';
+			}
+		} else {
+			startY = w.innerHeight + w.scrollY;
+
+			if ( OSVersion < 5 ) {
+				startX = Math.round((w.innerWidth - balloon.offsetWidth) / 2) + w.scrollX;
+				balloon.style.left = startX + 'px';
+				balloon.style.top = startY - balloon.offsetHeight - options.bottomOffset + 'px';
+			} else {
+				balloon.style.left = '50%';
+				balloon.style.marginLeft = -Math.round(balloon.offsetWidth / 2) + 'px';
+				balloon.style.bottom = options.bottomOffset + 'px';
+			}
+
+			switch (options.animationIn) {
+				case 'drop':
+					duration = '1s';
+					balloon.style.webkitTransform = 'translate3d(0,' + -(startY + options.bottomOffset) + 'px,0)';
+					break;
+				case 'bubble':
+					duration = '0.6s';
+					balloon.style.webkitTransform = 'translate3d(0,' + (balloon.offsetHeight + options.bottomOffset + 50) + 'px,0)';
+					break;
+				default:
+					duration = '1s';
+					balloon.style.opacity = '0';
+			}
+		}
+
+		balloon.offsetHeight;	// repaint trick
+		balloon.style.webkitTransitionDuration = duration;
+		balloon.style.opacity = '1';
+		balloon.style.webkitTransform = 'translate3d(0,0,0)';
+		balloon.addEventListener('webkitTransitionEnd', transitionEnd, false);
+
+		closeTimeout = setTimeout(close, options.lifespan);
+	}
+
+	function manualShow (override) {
+		if ( !isIDevice || balloon ) return;
+
+		overrideChecks = override;
+		loaded();
+	}
+
+	function close () {
+		clearInterval( positionInterval );
+		clearTimeout( closeTimeout );
+		closeTimeout = null;
+
+		var posY = 0,
+			posX = 0,
+			opacity = '1',
+			duration = '0',
+			closeButton = balloon.querySelector('.addToHomeClose');
+
+		if ( closeButton ) closeButton.removeEventListener('click', close, false);
+
+		if ( OSVersion < 5 ) {
+			posY = isIPad ? w.scrollY - startY : w.scrollY + w.innerHeight - startY;
+			posX = isIPad ? w.scrollX - startX : w.scrollX + Math.round((w.innerWidth - balloon.offsetWidth)/2) - startX;
+		}
+
+		balloon.style.webkitTransitionProperty = '-webkit-transform,opacity';
+
+		switch ( options.animationOut ) {
+			case 'drop':
+				if ( isIPad ) {
+					duration = '0.4s';
+					opacity = '0';
+					posY = posY + 50;
+				} else {
+					duration = '0.6s';
+					posY = posY + balloon.offsetHeight + options.bottomOffset + 50;
+				}
+				break;
+			case 'bubble':
+				if ( isIPad ) {
+					duration = '0.8s';
+					posY = posY - balloon.offsetHeight - options.bottomOffset - 50;
+				} else {
+					duration = '0.4s';
+					opacity = '0';
+					posY = posY - 50;
+				}
+				break;
+			default:
+				duration = '0.8s';
+				opacity = '0';
+		}
+
+		balloon.addEventListener('webkitTransitionEnd', transitionEnd, false);
+		balloon.style.opacity = opacity;
+		balloon.style.webkitTransitionDuration = duration;
+		balloon.style.webkitTransform = 'translate3d(' + posX + 'px,' + posY + 'px,0)';
+	}
+
+
+	function clicked () {
+		w.sessionStorage.setItem('addToHomeSession', '1');
+		isSessionActive = true;
+		close();
+	}
+
+	function transitionEnd () {
+		balloon.removeEventListener('webkitTransitionEnd', transitionEnd, false);
+
+		balloon.style.webkitTransitionProperty = '-webkit-transform';
+		balloon.style.webkitTransitionDuration = '0.2s';
+
+		// We reached the end!
+		if ( !closeTimeout ) {
+			balloon.parentNode.removeChild(balloon);
+			balloon = null;
+			return;
+		}
+
+		// On iOS 4 we start checking the element position
+		if ( OSVersion < 5 && closeTimeout ) positionInterval = setInterval(setPosition, options.iterations);
+	}
+
+	function setPosition () {
+		var matrix = new WebKitCSSMatrix(w.getComputedStyle(balloon, null).webkitTransform),
+			posY = isIPad ? w.scrollY - startY : w.scrollY + w.innerHeight - startY,
+			posX = isIPad ? w.scrollX - startX : w.scrollX + Math.round((w.innerWidth - balloon.offsetWidth) / 2) - startX;
+
+		// Screen didn't move
+		if ( posY == matrix.m42 && posX == matrix.m41 ) return;
+
+		balloon.style.webkitTransform = 'translate3d(' + posX + 'px,' + posY + 'px,0)';
+	}
+
+	// Clear local and session storages (this is useful primarily in development)
+	function reset () {
+		w.localStorage.removeItem('addToHome');
+		w.sessionStorage.removeItem('addToHomeSession');
+	}
+
+	// Bootstrap!
+	init();
+
+	return {
+		show: manualShow,
+		close: close,
+		reset: reset
+	};
+})(this);
