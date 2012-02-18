@@ -183,10 +183,16 @@
             </header>
             <hr>
             <div class="group-list">
+            <article>
+                <header><h3><a href="http://www.nbcuni.com/">NBC Universal</a> <span>Feb. 2012 &mdash; currently</span></h3></header>     
+                <ul>
+                    <li>Senior Front End Developer</li>
+                </ul>
+            </article>
               <article>
-                  <header><h3><a href="http://othermedia.com/">the OTHER media</a> <span>Sep. 2011 &mdash; currently</span></h3></header>     
+                  <header><h3><a href="http://othermedia.com/">the OTHER media</a> <span>Sep. 2011 &mdash; Feb. 2012</span></h3></header>     
                   <ul>
-                      <li>Front End Developer</li>
+                      <li>Senior Front End Developer</li>
                   </ul>
               </article>
 			<article>
