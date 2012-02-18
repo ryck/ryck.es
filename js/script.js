@@ -40,9 +40,6 @@ $(function(){
 	}
 
 
-
-
-
 /*
     window.addEventListener('load', function() {
       window.setTimeout(function() {
