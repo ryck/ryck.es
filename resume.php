@@ -10,6 +10,15 @@
   <title>ryck.me - résumé</title>
 	<meta name="description" content="ryck.me">
 	<meta name="author" content="Ricardo Gonzalez">
+	
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@ryck">
+	<meta name="twitter:url" content="http://ryck.me/">
+	<meta name="twitter:title" content="Ricardo González - Front End Developer">
+	<meta name="twitter:description" content="Front End Developer	with	broad	experience	in	HTML5,	CSS3, RWD, WordPress and	Drupal.">
+	<meta name="twitter:image" content="http://ryck.me/apple-touch-icon-iphone4.png">
+	
 
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
